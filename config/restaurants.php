@@ -127,7 +127,7 @@ return $restaurants = [
             
             "address"=> "Piazza Martiri della Libertà 18",
 
-            "description" =>"La Chiocciola è un ristorante che vi porta in un viaggio attraverso i sapori dell'Abruzzo. Il menu presenta piatti tradizionali preparati con ingredienti freschi e di stagione, che esaltano il gusto unico e la semplicità della cucina abruzzese. Venite a scoprire la vera essenza della cucina italiana e a gustare i piatti preparati con amore dai nostri chef. Un'atmosfera accogliente e raffinata vi attende al ristorante La Chiocciola, dove potrete gustare la cucina abruzzese in un ambiente confortevole.",
+            "description" =>"Re Matto è la pizzeria perfetta per le tue serate fuori! Con un'atmosfera accogliente e autentica, potrai gustare le migliori pizze cotte al forno a legna fino a tarda notte. La vasta selezione di ingredienti freschi e di qualità garantisce che ogni pizza sia un viaggio per i tuoi sensi. E se cerchi qualcosa di diverso, i nostri piatti disponibili a notte inoltrata sono perfetti per una serata fuori dal comune.",
              
             "phone"=> "+39 0321 158 1234",
 
