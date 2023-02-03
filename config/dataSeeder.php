@@ -35,6 +35,7 @@ return  [
             "type_id"=>4,
 
         ],
+
         [
             "user_id"=>2,
 
@@ -100,8 +101,6 @@ return  [
             
         ],
 
-        
-        
         [
            
             "user_id"=>4,
@@ -134,6 +133,7 @@ return  [
 
             
         ],
+
         [
 
             "user_id"=>5,
@@ -166,6 +166,7 @@ return  [
 
           
         ],
+        
         [   
             "user_id"=>6,
             
@@ -196,6 +197,160 @@ return  [
             "type_id"=>8,
 
         ],
+
+        [   
+            "user_id"=>7,
+            
+            "name"=> "Benvenuti al Sud Galliate",
+
+            "image_url"=> "https://tinyurl.com/napoules",
+            
+            "url"=> "https://www.facebook.com/benvenutialsudgalliate/",
+           
+            "rating"=> 4.0,
+           
+            "address"=> "Via della Repubblica 13",
+
+            "description" =>"Italiana, Pizza, Mediterranea, Napoletana, Campana, Italiana",
+          
+            "phone"=> "+39 3756 034489",
+            
+            "vat"=> "345677658927",
+
+            "opening_hours"=> "18:30",
+
+            "closing_hours"=> "00:00",
+
+            "opening_days"=> "Mar-Sab",
+
+            "email"=> "benvenuti@libero.it",
+
+            "type_id"=>4,
+
+        ],
+
+        [   
+            "user_id"=>8,
+            
+            "name"=> "Pub New Soliva",
+
+            "image_url"=> "https://tinyurl.com/pubdresd",
+            
+            "url"=> "https://www.facebook.com/NEWSOLIVA.RESTAURANT.PUB/",
+           
+            "rating"=> 5.0,
+           
+            "address"=> "Via Cascina Soliva 3",
+
+            "description" =>"Italiana, Bar, Pub, Americana, Steakhouse, Barbecue",
+          
+            "phone"=> "+39 0321 862610",
+            
+            "vat"=> "345677658977",
+
+            "opening_hours"=> "18:30",
+
+            "closing_hours"=> "02:00",
+
+            "opening_days"=> "Lun-Ven",
+
+            "email"=> "pubnew@libero.it",
+
+            "type_id"=>5,
+
+        ],
+
+        [   
+            "user_id"=>9,
+            
+            "name"=> "Osteria 50",
+
+            "image_url"=> "https://tinyurl.com/italiaost",
+            
+            "url"=> "https://osteria50.it/",
+           
+            "rating"=> 4.0,
+           
+            "address"=> "Viale Leonardo da Vinci 54/56",
+
+            "description" =>"Osteria 50 è la sintesi dell'accoglienza, un luogo a pochi passi dal centro di Galliate, dove ci si sente a casa in ogni momento.",
+          
+            "phone"=> "+39 0321 1646784",
+            
+            "vat"=> "345677658933",
+
+            "opening_hours"=> "12:00",
+
+            "closing_hours"=> "02:00",
+
+            "opening_days"=> "Mar-Sab",
+
+            "email"=> "osteriacinquanta@libero.it",
+
+            "type_id"=>4,
+
+        ],
+
+        [   
+            "user_id"=>10,
+            
+            "name"=> "Wasabis City",
+
+            "image_url"=> "https://tinyurl.com/sfswacxw",
+            
+            "url"=> "https://www.ristorantejapwasabi.com/",
+           
+            "rating"=> 4.0,
+           
+            "address"=> "Viale Beato Quagliotti 36",
+
+            "description" =>"Tutto l'esotismo e la ricchezza dei sapori del Giappone.",
+          
+            "phone"=> "+39 0321 861427",
+            
+            "vat"=> "345677658983",
+
+            "opening_hours"=> "06:00",
+
+            "closing_hours"=> "02:00",
+
+            "opening_days"=> "Lun-Sab",
+
+            "email"=> "ristorantejapwasabi@libero.it",
+
+            "type_id"=>2,
+
+        ],
+        [   
+            "user_id"=>11,
+            
+            "name"=> "Asian Way",
+
+            "image_url"=> "http://bit.ly/3Rtql98",
+            
+            "url"=> "https://www.ristorantejapwasabi.com/",
+           
+            "rating"=> 4.0,
+           
+            "address"=> "Viale Reggio 36",
+
+            "description" =>"Tutto l'esotismo e la ricchezza dei sapori orientali.",
+          
+            "phone"=> "+39 0321 821437",
+            
+            "vat"=> "345627658913",
+
+            "opening_hours"=> "06:00",
+
+            "closing_hours"=> "02:00",
+
+            "opening_days"=> "Lun-Sab",
+
+            "email"=> "ristoranteasianway@libero.it",
+
+            "type_id"=>2,
+
+        ],
         
 
 
@@ -208,15 +363,21 @@ return  [
                 "name"=>"Chinese Chicken Salad",
                 "price"=>"8.5",
                 "image"=>"https://images.spoonacular.com/file/wximages/423979-312x231.jpg",
+                "restaurant_id" => "11",
+                "category_id" => "16",
+                "ingredients"=> "pollame, salsa di soia, olio di sesamo, aglio, zenzero, aceto di vino, miele, sale, pepe nero",
                 "alergens"=>"soia, glutine, arachidi",
                 "size"=>"null"
 
             ],
 
             [
-                "name"=>"Masterpiece Chicken & Dumplings",
+                "name"=>"Masterpiece Chicken & Dumplings Soup",
                 "price"=>"7.5",
                 "image"=>"https://images.spoonacular.com/file/wximages/340668-312x231.jpg",
+                "restaurant_id" => "8",
+                "category_id" => "6",
+                "ingredients" => "ravioli, pollame, broccoli, coriandolo, olio di sesamo, semi di sesamo, asian stock powder",
                 "alergens"=>"soia, glutine, arachidi",
                 "size"=>"null"
 
@@ -226,22 +387,291 @@ return  [
                 "name"=>"Wagyu Beef & Ginger Dumplings",
                 "price"=>"12",
                 "image"=>"https://images.spoonacular.com/file/wximages/227524-312x231.jpg",
-                "alergens"=>"soia, glutine, arachidi",
-                "size"=>"null"
-
-            ],
-
-            [
-                "name"=>"Pizza Margherita",
-                "price"=>"7",
-                "image"=>"https://images.spoonacular.com/file/wximages/423971-312x231.jpg",
-                "alergens"=>"glutine, latticini",
+                "restaurant_id" => "6",
+                "category_id" => "15",                    
+                "ingredients" => "pollame, cipolla, uova, zenzero, zucchero, olio di sesamo, semi di sesamo, soia, gochujang",
+                "alergens" => "soia, glutine, arachidi",
                 "size"=>"null"
 
             ],
 
             // continuare con inserimento piatti (ancora una decina tra burgers pizze altre cucine )
+            [
+                "name"=>"Chicken Tacos",
+                "price"=>"3.5",
+                "image"=>"https://tinyurl.com/24sj5wm4",
+                "restaurant_id" => "6",
+                "category_id"=>"16",
+                "ingredients" => "tortillas di mais, pollo, sale, paprika macinata, origano, timo, cipolla, aglio, pepe di cayenna, peperoncino, pepe nero",
+                "alergens"=>"glutine",
+                "size"=>"null"
+            ],
 
+            [
+                "name"=>"Popeye Burger",
+                "price"=>"8.5",
+                "image"=>"https://tinyurl.com/panino2",
+                "restaurant_id" => "3",
+                "category_id"=>"16",
+                "ingredients" => "Hamburger di Spinaci, Patatine Fritte, Medaglione di Melanzane panate, Patate novelle al Forno, Pestato di Pomodoro Secco, Scamorza Affumicata, Cipolla Caramellata",
+                "alergens"=>"glutine, latticini, uova",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Chicken Burger",
+                "price"=>"6.5",
+                "image"=>"https://tinyurl.com/2p8uhdw6",
+                "restaurant_id" => "3",
+                "category_id"=>"16",
+                "ingredients" => "Sovraccoscia di Pollo Fritto, Pomodori, Bacon Croccante, Patatine Fritte, Fonduta di Parmigiano, Salsa Crispy Homemade Souce , Insalata",
+                "alergens"=>"glutine, latticini, uova",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Raw No Beef",
+                "price"=>"7.5",
+                "image"=>"https://tinyurl.com/veganob",
+                "restaurant_id" => "8",
+                "category_id"=>"4",
+                "ingredients" => "Raw No Beef(veg), Patate al Forno, Pestato di pomodoro secco, Patate novelle al Forno, Cipolla Rossa Grigliata",
+                "alergens"=>"glutine",
+                "size"=>"null"
+            ],
+
+            [
+                "name" => "Pizza La Ribelle",
+                "price" => "7",
+                "image" => "https://tinyurl.com/pizzabuf",
+                "restaurant_id" => "7",
+                "category_id"=>"15",
+                "ingredients" => "Mozzarella Fior di Latte, Bocconcino di Bufala, Basilico, Fonduta di Cheddar Artigianale , Olio Evo, Ragù di Ribs Homemade",
+                "alergens" => "glutine, latticini",
+                "size" => "null"
+
+            ],
+
+            [
+                "name"=>"Pizza La Porcellona",
+                "price"=>"7.5",
+                "image"=>"https://tinyurl.com/bruttabrutta",
+                "restaurant_id" => "7",
+                "category_id"=>"15",
+                "ingredients" => "Mozzarella Fior di Latte, Pulled Pork, Crema di Cheddar, Cipolla Caramellata, Bacon, Chips di Patate Novelle",
+                "alergens"=>"glutine, latticini",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Pizza La Focosa",
+                "price"=>"7.5",
+                "image"=>"https://tinyurl.com/diavolsds",
+                "restaurant_id" => "7",
+                "category_id"=>"15",
+                "ingredients" => "Pomodoro, Mozzarella, Jalapeño, Salsa Habanero, Salame piccante",
+                "alergens"=>"glutine, latticini",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Pizza La Cruda e Fusa",
+                "price"=>"7",
+                "image"=>"https://tinyurl.com/gesiuuuu",
+                "restaurant_id" => "7",
+                "category_id"=>"16",
+                "ingredients" => "Mozzarella Fior di Latte, Passata di pomodoro, Prosciutto Crudo, Fonduta di Parmigiano, Olio Evo, Sbriciolata di patate al forno",
+                "alergens"=>"glutine, latticini",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Pizza La Crocchettona",
+                "price"=>"6.5",
+                "image"=>"https://tinyurl.com/eeeeed",
+                "restaurant_id" => "7",
+                "category_id"=>"16",
+                "ingredients" => "Mozzarella Fior di Latte, Bacon, Olio Evo, Basilico, Crocchettone di Patate Menta e Pecorino, Fonduta al Pecorino Romano, Bocconcino di Bufala",
+                "alergens"=>"glutine, latticini",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Pizza La Vegetariana",
+                "price"=>"7.5",
+                "image"=>"https://tinyurl.com/msfy7cn5",
+                "restaurant_id" => "7",
+                "category_id"=>"7",
+                "ingredients" => "Mozzarella Fior di Latte, Medaglione di Melanzane panate, Patate al Forno, Pestato di pomodoro secco",
+                "alergens"=>"glutine, latticini",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Calzone Classico",
+                "price"=>"6.5",
+                "image"=>"https://tinyurl.com/mrtc3wb6",
+                "restaurant_id" => "7",
+                "category_id"=>"15",
+                "ingredients" => "prociutto cotto, scamorza, parmigiano, ricotta di pecora",
+                "alergens"=>"glutine, latticini",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Insalata di mare",
+                "price"=>"12",
+                "image"=>"https://tinyurl.com/mtk6v64w",
+                "restaurant_id" => "9",
+                "category_id"=>"22",
+                "ingredients" => "cozze, polpp, calamari, sedano, vongole, gamberi",
+                "alergens"=>"crostacei",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Gnocchi di patate al ragù di casa",
+                "price"=>"10",
+                "image"=>"https://tinyurl.com/423xbmt9",
+                "restaurant_id" => "9",
+                "category_id"=>"16",
+                "ingredients" => "cipolle, patate, pomodori pelati, cipolle, carne macinata di manzo",
+                "alergens"=>"glutine, uova, sedano",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Tagliatelle al ragù",
+                "price"=>"10",
+                "image"=>"https://tinyurl.com/33j4ethp",
+                "restaurant_id" => "9",
+                "category_id"=>"15",
+                "ingredients" => "tagliate all'uovo, sedano, manzo carne tritata, maiale carne tritata, carote",
+                "alergens"=>"glutine, uova, sedano",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Spaghetti alla Carbonara",
+                "price"=>"15",
+                "image"=>"https://tinyurl.com/5n7hu3vc",
+                "restaurant_id" => "9",
+                "category_id"=>"16",
+                "ingredients" => "spaghetti, tuorli, guanciale, pecorino romano, pepe nero",
+                "alergens"=>"glutine, uova",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Spaghetti all'Amatriciana",
+                "price"=>"16",
+                "image"=>"https://tinyurl.com/2n7udajv",
+                "restaurant_id" => "9",
+                "category_id"=>"16",
+                "ingredients" => "spaghetti, guanciale, pecorino romano, pomodori pelati",
+                "alergens"=>"glutine",
+                "size"=>"null"
+            ],
+
+            
+            [
+                "name"=>"Linguine Allo Scoglio",
+                "price"=>"18",
+                "image"=>"https://tinyurl.com/mr28t9z7",
+                "restaurant_id" => "9",
+                "category_id"=>"16",
+                "ingredients" => "spaghetti, vongole, scampi, cozze, calamari",
+                "alergens"=>"glutine",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Patate al forno",
+                "price"=>"4",
+                "image"=>"https://tinyurl.com/mr2pyw7e",
+                "restaurant_id" => "9",
+                "category_id"=>"16",
+                "ingredients"=> "patate, aglio, rosmarino, pepe nero",
+                "alergens"=>"glutine",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Sagne Cacio e Pepe",
+                "price"=>"9",
+                "image"=>"https://tinyurl.com/2p94as4n",
+                "restaurant_id" => "9",
+                "category_id"=>"16",
+                "ingredients"=> "fettine di guancialetto, pecorino romano, pepe nero",
+                "alergens"=>"glutine, uova",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Tempura di gamberi",
+                "price"=>"10",
+                "image"=>"https://tinyurl.com/mr3ys9un",
+                "restaurant_id" => "10",
+                "category_id"=>"7",
+                "ingredients"=> "gamberi, farina di riso",
+                "alergens"=>"glutine, crostacei, soia",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Tempura di gamberi",
+                "price"=>"10",
+                "image"=>"https://tinyurl.com/mr3ys9un",
+                "restaurant_id" => "11",
+                "category_id"=>"7",
+                "ingredients"=> "gamberi, farina di riso",
+                "alergens"=>"glutine, crostacei, soia",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Udon",
+                "price"=>"16",
+                "image"=>"https://tinyurl.com/4634bzrr",
+                "restaurant_id" => "11",
+                "category_id"=>"16",
+                "ingredients"=> "udon, cipolla, uova, carote",
+                "alergens"=>"glutine, crostacei, uova, pesce, soia",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Noodles in brodo con tempura di pesce",
+                "price"=>"14.50",
+                "image"=>"https://tinyurl.com/mtthy54s",
+                "restaurant_id" => "11",
+                "category_id"=>"15",
+                "ingredients"=> "udon, gamberi, porro, uova",
+                "alergens"=>"glutine, crostacei, pesce, soia",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Katsudon",
+                "price"=>"15",
+                "image"=>"https://tinyurl.com/3j2cnrzu",
+                "restaurant_id" => "10",
+                "category_id"=>"16",
+                "ingredients"=> "lonza di maiale, riso, uova",
+                "alergens"=>"glutine, arachidi, sedano, soia, senape",
+                "size"=>"null"
+            ],
+
+            [
+                "name"=>"Onion Rings",
+                "price"=>"5",
+                "image"=>"https://tinyurl.com/cipodfslla",
+                "restaurant_id" => "11",
+                "category_id"=>"16",
+                "ingredients"=> "cipolle rosse, uova",
+                "alergens"=>"glutine, uova",
+                "size"=>"null"
+            ],
 
 
 
@@ -252,7 +682,8 @@ return  [
                 "price"=>"2",
                 "image"=>"https://images.spoonacular.com/file/wximages/424563-312x231.png",
                 "alergens"=>"zuccheri",
-                "size"=>"null"
+                "size"=>"null",
+                "restaurant_id" => "1",
 
             ],
 
@@ -261,75 +692,129 @@ return  [
                 "price"=>"2",
                 "image"=>"https://images.spoonacular.com/file/wximages/267262-312x231.png",
                 "alergens"=>"zuccheri",
-                "size"=>"null"
+                "size"=>"null",
+                "restaurant_id" => "2",
 
             ],
 
-            // continuare inserimento bibite (almeno altre dieci alcoliche e non)
+            [
+                "name"=>"Coca-Cola Zero",
+                "price"=>"2",
+                "image"=>"https://images.spoonacular.com/file/wximages/424563-312x231.png",
+                "alergens"=>"zuccheri",
+                "size"=>"null",
+                "restaurant_id" => "3",
+            ],
+
+            [
+                "name"=>"Sprite",
+                "price"=>"2",
+                "image"=>"https://tinyurl.com/spiritosds",
+                "alergens"=>"zuccheri",
+                "size"=>"null",
+                "restaurant_id" => "4",
+            ],
+
+            [
+                "name"=>"Pepsi",
+                "price"=>"2",
+                "image"=>"https://tinyurl.com/pepssees",
+                "alergens"=>"zuccheri",
+                "size"=>"null",
+                "restaurant_id" => "5",
+            ],
+
+            [
+                "name"=>"Acqua naturale",
+                "price"=>"2",
+                "image"=>"https://tinyurl.com/siiumsium",
+                "alergens"=>" ",
+                "size"=>"null",
+                "restaurant_id" => "6",
+            ],
+
+            [
+                "name"=>"Acqua frizzante",
+                "price"=>"2",
+                "image"=>"https://tinyurl.com/bbiuoyuiytu",
+                "alergens"=>" ",
+                "size"=>"null",
+                "restaurant_id" => "7",
+            ],
+
+            [
+                "name"=>"The alla pesca",
+                "price"=>"2",
+                "image"=>"https://tinyurl.com/thedsedas",
+                "alergens"=>"zuccheri",
+                "size"=>"null",
+                "restaurant_id" => "8",
+            ],
+
+            [
+                "name"=>"The al limone",
+                "price"=>"2",
+                "image"=>"https://tinyurl.com/47dx22rd",
+                "alergens"=>"zuccheri",
+                "size"=>"null",
+                "restaurant_id" => "9",
+            ],
+
+            [
+                "name"=>"Chinotto",
+                "price"=>"4.5",
+                "image"=>"https://tinyurl.com/2p9bwtb7",
+                "alergens"=>"",
+                "size"=>"null",
+                "restaurant_id" => "10",
+            ],
+
+            [
+                "name"=>"Moretti",
+                "price"=>"2.8",
+                "image"=>"https://tinyurl.com/r9nmbxpv",
+                "alergens"=>"",
+                "size"=>"null",
+                "restaurant_id" => "11",
+            ],
+
+            [
+                "name"=>"Heineken",
+                "price"=>"2.8",
+                "image"=>"https://tinyurl.com/2favjs9e",
+                "alergens"=>"",
+                "size"=>"null",
+                "restaurant_id" => "1",
+            ],
+
+            [
+                "name"=>"Guinnes",
+                "price"=>"3",
+                "image"=>"https://tinyurl.com/2ybfz72j",
+                "alergens"=>"",
+                "size"=>"null",
+                "restaurant_id" => "2",
+            ],
+
+            [
+                "name"=>"Corona",
+                "price"=>"3",
+                "image"=>"https://tinyurl.com/73tuwk3j",
+                "alergens"=>"",
+                "size"=>"null",
+                "restaurant_id" => "3",
+            ],
+
+            [
+                "name"=>"Ichnussa",
+                "price"=>"4.5",
+                "image"=>"https://tinyurl.com/5yvtxscn",
+                "alergens"=>"",
+                "size"=>"null",
+                "restaurant_id" => "4",
+            ],
 
 
-
-
-
-
-
-        ],
-
-        "ingredients" =>[
-
-            "riso",
-            "latte",
-            "tonno",
-            "mais",
-            "cetrioli",
-            "pomodoro",
-            "insalata",
-            "formaggio",
-            "carote",
-            "pollame",
-            "zucchine",
-            "orzo",
-            "gamberi",
-            "peperoni",
-            "maiale",
-            "spinaci",
-            "salmone",
-            "patate",
-            "broccoli",
-            "uva",
-            "kiwi",
-            "limoni",
-            "aglio",
-            "amaranto",
-            "calamari",
-            "cavolfiori",
-            "ananas",
-            "yogurt",
-            "mele",
-            "cavoli",
-            "farro",
-            "bulgur",
-            "panna",
-            "gorgonzola",
-            "prosciutto",
-            "cotechino",
-            "salame",
-            "zuppa",
-            "braciole",
-            "spaghetti",
-            "lasagne",
-            "pesto",
-            "polenta",
-            "gnocchi",
-            "ravioli",
-            "tagliatelle",
-            "penne",
-            "fettuccine",
-            "linguine",
-            "risotto",
-            "minestrone",
-            "tortellini",
-            "biscotti" 
         ],
 
         "categories"=>[
