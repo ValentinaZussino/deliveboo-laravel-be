@@ -1,7 +1,12 @@
 <?php   
 
-return $restaurants = [
+return  [
+
+
+    "restaurants" =>  [
+
         [
+            "user_id"=>1,
             
             "name"=> "La locanda delle Due Suocere",
 
@@ -25,10 +30,14 @@ return $restaurants = [
 
             "opening_days"=>"Lun-Sab",
 
-            "email"=>"2Suocere@gmail.com"
+            "email"=>"2Suocere@gmail.com",
+
+            "type_id"=>4,
 
         ],
         [
+            "user_id"=>2,
+
             "name"=> "La Vecchia",
 
             "image_url"=> "",
@@ -52,12 +61,14 @@ return $restaurants = [
 
             "opening_days"=>"Lun-Dom",
 
-            "email"=>"lavecchia@gmail.com"
+            "email"=>"lavecchia@gmail.com",
+
+            "type_id"=>4,
 
         ],
         
         [
-            
+            "user_id"=>3,
           
             "name"=> "The Kitchen",
 
@@ -82,7 +93,9 @@ return $restaurants = [
 
             "opening_days"=>"Lun-Dom",
 
-            "email"=>"thekitchen@gmail.com"
+            "email"=>"thekitchen@gmail.com",
+
+            "type_id"=>8,
 
             
         ],
@@ -91,6 +104,8 @@ return $restaurants = [
         
         [
            
+            "user_id"=>4,
+
             "name"=> "La Chiocciola",
 
             "image_url"=> "https://s3-media2.fl.yelpcdn.com/bphoto/9IsZmjdy7cu60HOyui942Q/o.jpg",
@@ -113,12 +128,18 @@ return $restaurants = [
 
             "opening_days"=>"Mar-Dom",
 
-            "email"=>"lachicciola@gmail.com"
+            "email"=>"lachicciola@gmail.com",
+
+            "type_id"=>8,
+
             
         ],
         [
+
+            "user_id"=>5,
             
             "name"=> "Re Matto",
+
             "image_url"=> "https://s3-media3.fl.yelpcdn.com/bphoto/IfKt4VPWp-U0ndAUkvB0EQ/o.jpg",
             
             "url"=> "https://www.yelp.com/biz/re-matto-galliate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
@@ -139,10 +160,14 @@ return $restaurants = [
 
             "opening_days"=> "Mar-Sab",
 
-            "email"=> "rematto@gmail.com"
+            "email"=> "rematto@gmail.com",
+
+            "type_id"=>6,
+
           
         ],
-        [
+        [   
+            "user_id"=>6,
             
             "name"=> "American Graffiti",
 
@@ -166,8 +191,213 @@ return $restaurants = [
 
             "opening_days"=> "Mer-Sab",
 
-            "email"=> "american@graffiti.com"
+            "email"=> "american@graffiti.com",
+
+            "type_id"=>8,
+
         ],
+        
+
+
+        ],
+
+        "plates" => [
+
+           
+            [
+                "name"=>"Chinese Chicken Salad",
+                "price"=>"8.5",
+                "image"=>"https://images.spoonacular.com/file/wximages/423979-312x231.jpg",
+                "alergens"=>"soia, glutine, arachidi",
+                "size"=>"null"
+
+            ],
+
+            [
+                "name"=>"Masterpiece Chicken & Dumplings",
+                "price"=>"7.5",
+                "image"=>"https://images.spoonacular.com/file/wximages/340668-312x231.jpg",
+                "alergens"=>"soia, glutine, arachidi",
+                "size"=>"null"
+
+            ],
+
+            [
+                "name"=>"Wagyu Beef & Ginger Dumplings",
+                "price"=>"12",
+                "image"=>"https://images.spoonacular.com/file/wximages/227524-312x231.jpg",
+                "alergens"=>"soia, glutine, arachidi",
+                "size"=>"null"
+
+            ],
+
+            [
+                "name"=>"Pizza Margherita",
+                "price"=>"7",
+                "image"=>"https://images.spoonacular.com/file/wximages/423971-312x231.jpg",
+                "alergens"=>"glutine, latticini",
+                "size"=>"null"
+
+            ],
+
+            // continuare con inserimento piatti (ancora una decina tra burgers pizze altre cucine )
+
+
+
+
+            // bibite
+
+            [
+                "name"=>"Coca-Cola",
+                "price"=>"2",
+                "image"=>"https://images.spoonacular.com/file/wximages/424563-312x231.png",
+                "alergens"=>"zuccheri",
+                "size"=>"null"
+
+            ],
+
+            [
+                "name"=>"Fanta",
+                "price"=>"2",
+                "image"=>"https://images.spoonacular.com/file/wximages/267262-312x231.png",
+                "alergens"=>"zuccheri",
+                "size"=>"null"
+
+            ],
+
+            // continuare inserimento bibite (almeno altre dieci alcoliche e non)
+
+
+
+
+
+
+
+        ],
+
+        "ingredients" =>[
+
+            "riso",
+            "latte",
+            "tonno",
+            "mais",
+            "cetrioli",
+            "pomodoro",
+            "insalata",
+            "formaggio",
+            "carote",
+            "pollame",
+            "zucchine",
+            "orzo",
+            "gamberi",
+            "peperoni",
+            "maiale",
+            "spinaci",
+            "salmone",
+            "patate",
+            "broccoli",
+            "uva",
+            "kiwi",
+            "limoni",
+            "aglio",
+            "amaranto",
+            "calamari",
+            "cavolfiori",
+            "ananas",
+            "yogurt",
+            "mele",
+            "cavoli",
+            "farro",
+            "bulgur",
+            "panna",
+            "gorgonzola",
+            "prosciutto",
+            "cotechino",
+            "salame",
+            "zuppa",
+            "braciole",
+            "spaghetti",
+            "lasagne",
+            "pesto",
+            "polenta",
+            "gnocchi",
+            "ravioli",
+            "tagliatelle",
+            "penne",
+            "fettuccine",
+            "linguine",
+            "risotto",
+            "minestrone",
+            "tortellini",
+            "biscotti" 
+        ],
+
+        "categories"=>[
+
+            "gluten-free",
+            "lactose-free",
+            "vegetarian",
+            "vegan",
+            "paleo",
+            "ketogenic",
+            "low-carb",
+            "low-fat",
+            "organic",
+            "non-GMO",
+            "halal",
+            "kosher",
+            "raw",
+            "whole food",
+            "carb-conscious",
+            "high-protein",
+            "dairy-free",
+            "soy-free",
+            "nut-free",
+            "egg-free",
+            "grain-free",
+            "pescatarian"
+
+        ],
+
+        "types"=>[
+
+            "Ristorante Cinese",
+            "Ristorante Giapponese",
+            "Ristorante Indiano",
+            "Ristorante Italiano",
+            "Ristorante Messicano",
+            "Pizzeria",
+            "Steakhouse",
+            "Burgers-House",
+            "Ristorante di Sushi",
+            "Ristorante di pesce",
+            "Ristorante Thai",
+            "Ristorante Vietnamita",
+            "Ristorante Mediterraneo",
+            "Ristorante Greco",
+            "Ristorante Coreano",
+            "Ristorante Latinoamericano",
+            "Ristorante Mediorientale",
+            "Ristorante Francese",
+            "Fusion restaurant indiano-cinese",
+            "Bar di Tapas",
+            "Brasserie",
+            "Buffet",
+            "Ristorante di fast food",
+
+            // aggiungerne se avete sbatta
+           
+        ],
+
+
+
+
+
+
+
+
+    
+       
         
 ]
 
