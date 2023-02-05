@@ -15,6 +15,22 @@ class PlateSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $plates = config('dataseeder.plates');
+        foreach ($plates as $plate) {
+            foreach ($plate['restaurant_id'] as $restaurant_id){
+                $newPlate = new Plate();
+                $newPlate->name = $plate['name'];
+                $newPlate->slug = Plate::generateSlug($newPlate->name, $restaurant_id);
+                $newPlate->price = $plate['price'];
+                $newPlate->available = $plate['available'];
+                $newPlate->image = $plate['image'];
+                $newPlate->ingredients = $plate['ingredients'];
+                $newPlate->allergens = $plate['allergens'];
+                $newPlate->size = $plate['size'];
+                $newPlate->restaurant_id = $restaurant_id;
+                $newPlate->category_id = $plate['category_id'];
+                $newPlate->save();
+            }
+        }
     }
 }
