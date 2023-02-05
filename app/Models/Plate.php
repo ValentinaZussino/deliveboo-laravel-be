@@ -16,10 +16,18 @@ class Plate extends Model
 
     protected $guarded = [];
 
-    // public static function generateSlug($name)
-    // {
-    //     return Str::slug($name, '-');
-    // }
+    public static function generateSlug($name, $restaurant_id)
+    {
+        $restaurant = Restaurant::where('id', $restaurant_id)->first();
+
+        $restaurantName = $restaurant->name;
+
+        $slugConcateneted = $restaurantName . '-' . $name;
+
+        $slug = Str::slug($slugConcateneted);
+
+        return $slug;
+    }
 
     public function restaurant():BelongsTo{
 

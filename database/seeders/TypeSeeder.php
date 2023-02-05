@@ -15,6 +15,12 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $types = config('dataseeder.types');
+        foreach ($types as $type) {
+            $newType = new Type();
+            $newType->name = $type;
+            $newType->slug = Type::generateSlug($newType->name);
+            $newType->save();
+        }
     }
 }

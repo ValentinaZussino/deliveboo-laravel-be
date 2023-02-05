@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\RestaurantController;
+use App\Http\Controllers\Admin\PlateController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\TypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +38,9 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')
          Route::get('/', [DashboardController::class, 'index'])
          ->name('dashboard');
          Route::resource('restaurants', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
-        //  Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug']);
-        //  Route::resource('devlangs', DevlangController::class)->parameters(['devlangs' => 'devlang:slug'])->except('show', 'create', 'edit');
+         Route::resource('plates', PlateController::class)->parameters(['plates' => 'plate:slug']);
+         Route::resource('categories', CategoryController::class)->parameters(['categories' => 'category:slug'])->except('show', 'create', 'edit');
+         Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug'])->except('show', 'create', 'edit');
 
    });
 

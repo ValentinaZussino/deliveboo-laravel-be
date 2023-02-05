@@ -1,5 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-<h1>index restaurant</h1>
+<h1>create plate</h1>
 
 @endsection
