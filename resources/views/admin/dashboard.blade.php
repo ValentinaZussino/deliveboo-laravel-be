@@ -19,5 +19,8 @@
             </div>
         </div>
     </div>
+    <div class="mt-5 text-center">
+        <h1>{{$restaurant->name}}</h1>
+    </div>
 </div>
 @endsection

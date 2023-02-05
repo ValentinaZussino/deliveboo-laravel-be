@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Restaurant;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -13,8 +15,13 @@ class DashboardController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('admin.dashboard');
+    {   
+        $restaurant = Restaurant::find(Auth::user()->id);
+        if(Restaurant::find(Auth::user()->id)){
+            return view('admin.dashboard', compact('restaurant'));
+        }else{
+            return view('admin.restaurants.create');
+        }
     }
 
     /**
