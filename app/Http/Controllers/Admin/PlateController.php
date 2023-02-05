@@ -1,7 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\Models\Plate;
+use App\Models\Restaurant;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class PlateController extends Controller
@@ -13,7 +17,10 @@ class PlateController extends Controller
      */
     public function index()
     {
-        //
+        $restaurant = Restaurant::find(Auth::user()->id);
+        $plates = Plate::where('restaurant_id', $restaurant->id)->get();
+        return view('admin.plates.index', compact('plates'));
+
     }
 
     /**
