@@ -19,6 +19,15 @@
     #sidebarMenu {
         background-color: white;
         color: black;
-        filter: drop-shadow(11px 0px 60px rgba(104, 104, 104, 0.1));
+        border-right: 1px solid rgba(223, 223, 223);
+        filter: drop-shadow(15px 0px 60px rgba(104, 104, 104, 0.1));
+
+        .bg-secondary{
+            background-color: rgb(221, 26, 75)!important;
+            color: white!important;
+
+            border-radius: 5px;
+            margin: 3px;
+        }
     }
 }
