@@ -2,6 +2,34 @@
 @import "./partials/sidebar.scss";
 
 
+
+// PAGINATION COLOR
+.pagination{
+    .page-link{
+    color: #000;}
+
+    .page-item.active .page-link {
+        color: #fff !important;
+        background-color: rgb(221, 26, 75) !important;
+        border-color: #fff !important;
+    }
+}
+
+// BUTTON COLOR
+input[type="text"]:focus {
+    border-color: rgb(221, 26, 75);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(221, 26, 75, 0.6);
+}
+#button-addon2{
+    color: rgb(221, 26, 75);
+    border-color: rgb(221, 26, 75);
+
+    &:hover{
+        color: #fff;
+        background-color: rgb(221, 26, 75) !important;
+    }
+}
+
 // MODAL DELETE
 .modal-confirm {
     color: #636363;
