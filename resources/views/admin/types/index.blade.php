@@ -6,9 +6,11 @@
             <div class="card">
                 <div class="card-top px-card pt-4">
                     <div class="row justify-content-between align-items-center gy-2">
+                        {{-- TITOLO --}}
                         <div class="col-sm-4 col-md-6 col-lg-8">
-                            <h5 class="d-flex px-2 gap-1 mb-0">Add New Types</h5>
+                            <h5 class="px-2 gap-1 mb-0">Add New Types</h5>
                         </div>
+
                         {{-- CAMPO DI INPUT PER CREARE UNA NUOVA RIGA --}}
                         <div class="col-sm-8 col-md-6 col-lg-4 px-4">
                             <form action="{{route('admin.types.store')}}" method="post" class="d-flex align-items-center">
@@ -19,6 +21,8 @@
                                 </div>
                             </form>
                         </div>
+                    </div>
+                </div>
 
                         {{-- ALERT --}}
                         @if(session()->has('message'))
@@ -35,17 +39,17 @@
                         @endif
 
                         {{-- TABELLA --}}
-                        <div class="py-4">
-                            <div class="table-responsive datatable-custom">
-                                <table class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table">
-                                    <thead class="thead-light">
-                                    <tr>
+                    <div class="py-4">
+                        <div class="table-responsive datatable-custom">
+                            <table class="table table-hover table-borderless table-thead-bordered table-nowrap table-align-middle card-table">
+                                <thead class="thead-light">
+                                    <tr class="table-active">
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Restaurants</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
+                                </thead>
+                                <tbody>
                                     @foreach($types as $type)
                                             <tr>
                                                 <th>
@@ -59,10 +63,11 @@
                                                 </td>
                                             </tr>
                                     @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
-
-    {{ $types->links('vendor.pagination.bootstrap-5') }}
+                    </div>
+                    <div class="px-4">
+                        {{ $types->links('vendor.pagination.bootstrap-5') }}
+                    </div>
 @endsection
