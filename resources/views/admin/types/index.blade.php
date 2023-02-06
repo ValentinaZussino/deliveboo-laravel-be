@@ -49,4 +49,5 @@
         @endforeach
         </tbody>
     </table>
+    {{ $types->links('vendor.pagination.bootstrap-5') }}
 @endsection
