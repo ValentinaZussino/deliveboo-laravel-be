@@ -28,7 +28,7 @@
 
     <div id="wrapper-admin">
 
-        @include('partials.admin.header')
+        {{-- @include('partials.admin.header') --}}
 
         <main class="mt-4 container-fluid">
             @yield('content')
