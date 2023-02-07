@@ -25,14 +25,13 @@ class UpdatePlateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', Rule::unique('plates')->ignore($this->plate)],
+            'name' => 'required|min:2|max:100',
             'price' => 'required|numeric|min:0|max:9999,99',
             'available' => 'required',
             'image' => 'nullable|image|max:5000',
             'ingredients' => 'required',
             'allergens' => 'nullable',
             'size' => 'nullable|max:30',
-            'restaurant_id' => 'required|exists:restaurants,id',
             'category_id' =>'required|exists:categories,id',
         ];
     }
@@ -47,8 +46,7 @@ class UpdatePlateRequest extends FormRequest
             'available.required' => 'Indicare la disponibilità è obbligatorio.',
             'ingredients.required' => 'Gli ingredienti sono obbligatori',
             'size.max' => 'La dimensione non deve superare i :max caratteri',
-            'restaurant_id.required' => 'Il campo è richiesto',
-            'category_id.required' => 'il campo è richiesto',
+            'category_id.required' => 'Il campo è richiesto',
         ];
     }
 }

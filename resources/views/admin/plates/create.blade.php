@@ -2,7 +2,6 @@
 @section('content')
 
 <div class="container">
-    <h1>create plate</h1>
     {{-- messages --}}
     @if(session()->has('message'))
     <div class="alert alert-success mb-3 mt-3 w-75 m-auto text-capitalize">
@@ -88,7 +87,7 @@
             @enderror
         </div>
         {{-- btns --}}
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success">Crea</button>
         <button type="reset" class="btn btn-primary">Reset</button>
     </form>
 </div>

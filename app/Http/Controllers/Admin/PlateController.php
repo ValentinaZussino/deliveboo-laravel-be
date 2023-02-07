@@ -45,10 +45,9 @@ class PlateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePlateRequest $request)
     {
-        // $data = $request->validated();
-        $data=$request->all();
+        $data = $request->validated();
 
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
         $slug = Plate::generateSlug($request->name, $restaurant->id);
@@ -84,7 +83,7 @@ class PlateController extends Controller
     public function edit(Plate $plate)
     {
         $categories = Category::all();
-        return view('admin.plates.edit', compact('categories'));
+        return view('admin.plates.edit', compact('categories', 'plate'));
     }
 
     /**
