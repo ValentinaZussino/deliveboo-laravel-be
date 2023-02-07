@@ -4,6 +4,10 @@
 <!-- Section: Design Block -->
 <section class="text-center text-lg-start">
     <style>
+
+      .container-register{
+        margin-top: 100px
+      }
       .cascading-right {
         margin-right: -50px;
       }
@@ -16,7 +20,7 @@
     </style>
   
     <!-- Jumbotron -->
-    <div class="container py-4">
+    <div class="container container-register py-4 ">
       <div class="row g-0 align-items-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card cascading-right" style="
