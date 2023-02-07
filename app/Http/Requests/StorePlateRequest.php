@@ -31,7 +31,6 @@ class StorePlateRequest extends FormRequest
             'ingredients' => 'required',
             'allergens' => 'nullable',
             'size' => 'nullable|max:30',
-            'restaurant_id' => 'required|exists:restaurants,id',
             'category_id' =>'required|exists:categories,id',
         ];
     }
@@ -46,8 +45,7 @@ class StorePlateRequest extends FormRequest
             'available.required' => 'Indicare la disponibilità è obbligatorio.',
             'ingredients.required' => 'Gli ingredienti sono obbligatori',
             'size.max' => 'La dimensione non deve superare i :max caratteri',
-            'restaurant_id.required' => 'Il campo è richiesto',
-            'category_id.required' => 'il campo è richiesto',
+            'category_id.required' => 'Il campo è richiesto',
         ];
     }
 }
