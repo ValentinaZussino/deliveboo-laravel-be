@@ -46,7 +46,7 @@
                                     <tr class="table-active">
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Restaurants</th>
+                                        {{-- <th scope="col">Restaurants</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -58,9 +58,9 @@
                                                 <td>
                                                     {{$type->name}}
                                                 </td>
-                                                <td>
+                                                {{-- <td>
                                                     {{$type->restaurants && count($type->restaurants) > 0 ? count($type->restaurants) : 0}}
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                     @endforeach
                                 </tbody>
