@@ -123,7 +123,7 @@
         </div>
   
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+          <img src={{url('/img/pexels-photo-3028127.jpeg')}} class="w-100 rounded-4 shadow-4"
             alt="" />
         </div>
       </div>
