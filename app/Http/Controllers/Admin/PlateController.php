@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePlateRequest;
+use App\Http\Requests\UpdatePlateRequest;
 use App\Models\Plate;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use Illuminate\Support\Facades\Storage;
 
 class PlateController extends Controller
 {
@@ -16,11 +20,12 @@ class PlateController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $restaurant = Restaurant::find(Auth::user()->id);
+    {   
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        // dd($restaurant);
         $plates = Plate::where('restaurant_id', $restaurant->id)->get();
+        // dd($plates);
         return view('admin.plates.index', compact('plates'));
-
     }
 
     /**
@@ -30,7 +35,8 @@ class PlateController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('admin.plates.create', compact('categories'));
     }
 
     /**
@@ -41,7 +47,20 @@ class PlateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $data = $request->validated();
+        $data=$request->all();
+
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        $slug = Plate::generateSlug($request->name, $restaurant->id);
+        $data['slug'] = $slug;
+        $data['restaurant_id'] = $restaurant->id;
+        if($request->hasFile('image')){
+            $path = Storage::put('images', $request->image);
+            $data['image'] = $path;
+        }
+
+        $newPlate = Plate::create($data);
+        return redirect()->route('admin.plates.show', $newPlate->slug);
     }
 
     /**
@@ -50,9 +69,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Plate $plate)
+
     {
-        //
+        return view('admin.plates.show', compact('plate'));
     }
 
     /**
@@ -61,9 +81,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Plate $plate)
     {
-        //
+        $categories = Category::all();
+        return view('admin.plates.edit', compact('categories'));
     }
 
     /**
@@ -73,9 +94,26 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePlateRequest $request, Plate $plate)
     {
-        //
+        $data = $request->validated();
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        $slug = Plate::generateSlug($request->name, $restaurant->id);
+        $data['slug'] = $slug;
+        $data['restaurant_id'] = $restaurant->id;
+        if($request->hasFile('image')){
+            if ($plate->image) {
+                Storage::delete($plate->image);
+            }
+
+            $path = Storage::put('images', $request->image);
+            $data['image'] = $path;
+        }
+
+        $updated = $plate->name;
+        $plate->update($data);
+
+        return redirect()->route('admin.plates.index')->with('message', "$updated updated successfully");
     }
 
     /**
@@ -84,8 +122,10 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Plate $plate)
     {
-        //
+        $deleted = $plate->name;
+        $plate->delete();
+        return redirect()->route('admin.plates.index')->with('message', "$deleted deleted successfully");
     }
 }
