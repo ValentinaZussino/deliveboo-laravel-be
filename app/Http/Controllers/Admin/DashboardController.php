@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Type;
+
 
 class DashboardController extends Controller
 {
@@ -16,11 +18,12 @@ class DashboardController extends Controller
      */
     public function index()
     {   
-        $restaurant = Restaurant::find(Auth::user()->id);
-        if(Restaurant::find(Auth::user()->id)){
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        if($restaurant){
             return view('admin.dashboard', compact('restaurant'));
         }else{
-            return view('admin.restaurants.create');
+            $types = Type::all();
+            return view('admin.restaurants.create', compact('types'));
         }
     }
 

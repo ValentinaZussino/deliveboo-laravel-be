@@ -60,7 +60,7 @@
 
                 <div class="mb-3">
                     <label for="opening_hours" class="form-label">Opens at</label>
-                    <input type="time" id="opening_hours"" name="opening_hours"" min="00:00" max="24:00" required>
+                    <input type="time" id="opening_hours" name="opening_hours" min="00:00" max="24:00" required>
 
                     @error('opening_hours')
                         <div class="invalid-feedback">{{ $message }}</div>
