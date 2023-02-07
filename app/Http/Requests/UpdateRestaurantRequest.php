@@ -27,18 +27,18 @@ class UpdateRestaurantRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'unique', 'max:100', Rule::unique('restaurant')->ignore($this->restaurant)],
+            'name' => ['required', 'max:100', Rule::unique('restaurants')->ignore($this->restaurant)],
             'address' => 'required|max:255',
             'vat' => 'required',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => ['required','email','max:255',Rule::unique('restaurants')->ignore($this->restaurant)],
             'phone' => 'required|max:255',
             'opening_hours' => 'required|max:20',
             'closing_hours' => 'required|max:20',
             'opening_days' => 'required|max:100',
-            'image' => 'nullable|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|max:2048',
             'website' => 'nullable',
             'description' => 'nullable',
-            'type_id' =>'required|exists:types,id'
+            
 
         ];
     }
@@ -50,19 +50,22 @@ class UpdateRestaurantRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'A name is required',
-            'name.unique' => 'Name must be unique',
-            'name.max' => 'Name must have a max lenght of :max characters',
-            'name.min' => 'Name must have a min lenght of :min characters',
-            'address.required' => 'A address is required',
-            'vat.required' => 'A VAT is required',
-            'email.required' => 'An email is required',
-            'phone.required' => 'A phone number is required',
-            'opening_hours.required' => 'A opening hours is required',
-            'closing_hours.required' => 'A closing hours is required',
-            'opening_days.required' => 'A opening days is required',
-            'image.mimes' => 'Image should be in either jpeg, png, jpg, or gif format',
-            'image.max' => 'Image size should not exceed 2MB',
+            'name.required' => 'È richiesto un nome di minimo 5 lettere',
+            'name.unique:restaurants' => 'Il nome deve essere unico',
+            'name.max' => 'Il nome può avere una lunghezza massima di :max lettere',
+            'name.min' => 'Il nome deve avere una lunghezza minima di :min lettere',
+            'address.required' => 'È richiesto un indirizzo',
+            'address.unique:restaurants' => 'Indirizzo già utilizzato',
+            'vat.required' => 'La P.IVA è richiesta',
+            'vat.unique' => 'P.IVA già registrata',
+            'vat.max' => 'La P.IVA deve avere una lunghezza di 11 caratteri',
+            'email.required' => 'Il campo Email è richiesto',
+            'email.unique:restaurants' => 'Email già registrata',
+            'email.max' => 'La lunghezza dell\'email non può eccedere i 50 caratteri',
+           
+            'image.max' => 'L\immagine non può superare i 2MB di peso',
+            'phone.max' => 'Il numero di telefono non può eccedere i :max caratteri',
+            'phone.min' => 'Il numero di telefono deve essere lungo almeno :min caratteri',
 
         ];
     }

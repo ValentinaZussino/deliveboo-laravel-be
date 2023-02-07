@@ -8,7 +8,7 @@
         <div class="row">
 
             <div class="mb-3">
-                <label for="name" class="form-label">Restaurant Name</label>
+                <label for="name" class="form-label">Nome del Ristorante</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required>
 
                 @error('name')
@@ -17,9 +17,9 @@
             </div>
 
             <div class="mb-3">
-                <label for="address" class="form-label">Restaurant address</label>
+                <label for="address" class="form-label">Indirizzo civico</label>
                 <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
-                    name="address">
+                    name="address" placeholder="Via/C.so/P.zza xxxx xxxx, 12">
 
                 @error('address')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">Restaurant email</label>
+                <label for="email" class="form-label">Email del Ristorante</label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
                     name="email">
 
@@ -37,7 +37,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="vat" class="form-label">Restaurant vat</label>
+                <label for="vat" class="form-label">P.IVA</label>
                 <input type="text" class="form-control @error('vat') is-invalid @enderror" id="vat" name="vat">
 
                 @error('vat')
@@ -46,7 +46,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="phone" class="form-label">Restaurant phone</label>
+                <label for="phone" class="form-label">Recapito Telefonico</label>
                 <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone"
                     name="phone">
 
@@ -59,7 +59,7 @@
             <div class="d-flex">
 
                 <div class="mb-3">
-                    <label for="opening_hours" class="form-label">Opens at</label>
+                    <label for="opening_hours" class="form-label">Orario apertura</label>
                     <input type="time" id="opening_hours" name="opening_hours" min="00:00" max="24:00" required>
 
                     @error('opening_hours')
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="closing_hours" class="form-label">Closes at</label>
+                    <label for="closing_hours" class="form-label">Orario Chiusura</label>
                     <input type="time" id="closing_hours" name="closing_hours" min="00:00" max="24:00" required>
 
                     @error('closing_hours')
@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="opening_days" class="form-label">Working days</label>
+                    <label for="opening_days" class="form-label">Giorni di apertura</label>
                     <input type="text" id="opening_days" name="opening_days" required>
 
                     @error('opening_days')
@@ -87,7 +87,7 @@
             </div>
 
             
-                <label for="types" class="form-label">Select your cuisine</label><br>
+                <label for="types" class="form-label">Selezionare la tipologia di cucina servita</label><br>
                 <div class="tipi-select overflow-auto d-flex flex-column col-4">
                     @foreach ($types as $type)
                         <div class="d-flex">
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="website" class="form-label">Restaurant's website</label>
+                    <label for="website" class="form-label">Sito Web del Ristorante</label>
                     <input type="url" id="website" name="website" placeholder="https://example.com"
                     pattern="https://.*" size="30"
                     required>
@@ -115,8 +115,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" id="description" name="description" placeholder="Give us a description of your business"></textarea>
+                    <label for="description" class="form-label">Descrizione del Ristorante</label>
+                    <textarea class="form-control" id="description" name="description" placeholder="Introduci il tuo ristoranti ai clienti"></textarea>
 
                     @error('description')
                         <div class="invalid-feedback">{{ $message }}</div>
