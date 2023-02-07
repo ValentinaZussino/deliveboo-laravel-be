@@ -59,7 +59,7 @@
                 <div class="form-check d-flex justify-content-center mb-4">
                   <input class="form-check-input me-2" type="checkbox" value="" id="remember" checked {{ old('remember') ? 'checked' : '' }} />
                   <label class="form-check-label" for="form2Example33">
-                    Subscribe to our newsletter
+                    Remeber me 
                   </label>
                 </div>
   
@@ -68,25 +68,7 @@
                   {{ __('Login') }}
                 </button>
   
-                <!-- Register buttons -->
-                <div class="text-center">
-                  <p>or sign up with:</p>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div>
+                
               </form>
             </div>
           </div>

@@ -102,25 +102,7 @@
                   {{ __('Register') }}
                 </button>
   
-                <!-- Register buttons -->
-                <div class="text-center">
-                  <p>or sign up with:</p>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div>
+                
               </form>
             </div>
           </div>
