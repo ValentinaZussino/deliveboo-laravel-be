@@ -83,7 +83,7 @@ class RestaurantController extends Controller
 
         
 
-        return redirect()->route('admin.restaurants.index')->with('message', "$newRestaurant->name created successfully");
+        return redirect()->route('admin.restaurants.index')->with('message', "$newRestaurant->name creato con successo");
     }
 
     /**
@@ -106,7 +106,7 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
         $types = Type::all();
-        return view('admin.restaurants.create', compact('types')); 
+        return view('admin.restaurants.edit', compact('types','restaurant')); 
     }
 
     /**
@@ -118,7 +118,10 @@ class RestaurantController extends Controller
      */
     public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
     {
+        // dd($restaurant);
+        
         $data = $request->validated();
+        
         $slug = Restaurant::generateSlug($request->name);
         $data['slug'] = $slug;
 
@@ -136,7 +139,7 @@ class RestaurantController extends Controller
         } else {
             $restaurant->types()->attach($request->types);
         }
-        return redirect()->route('admin.restaurants.index')->with('message', "$restaurant->name updated succesfully");
+        return redirect()->route('admin.restaurants.index')->with('message', "$restaurant->name aggiornato con successo");
     }
 
     /**
@@ -152,6 +155,6 @@ class RestaurantController extends Controller
         }
 
         $restaurant->delete();
-        return redirect()->route('admin.restaurants.index')->with('message', "$restaurant->name deleted succesfully");
+        return redirect()->route('admin.restaurants.index')->with('message', "$restaurant->name cancellato con successo");
     }
 }

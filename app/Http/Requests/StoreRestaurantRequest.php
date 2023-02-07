@@ -52,22 +52,22 @@ class StoreRestaurantRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'A name is required',
-            'name.unique:restaurants' => 'Name must be unique',
-            'name.max' => 'Name must have a max lenght of :max characters',
-            'name.min' => 'Name must have a min lenght of :min characters',
-            'address.required' => 'Address is required',
-            'address.unique:restaurants' => 'Address must be unique',
-            'vat.required' => 'Vat is required',
-            'vat.unique' => 'Vat must be unique',
-            'vat.max' => 'Vat must have a max of :max characters',
-            'email.required' => 'Email is required',
-            'email.unique:restaurants' => 'Email must be unique',
-            'email.max' => 'Email must have a max of :max characters',
-            'image.mimes' => 'Image should be in either jpeg, png, jpg, or gif format',
-            'image.max' => 'Image size should not exceed 2MB',
-            'phone.max' => 'Phone must be of max :max number',
-            'phone.min' => 'Phone must be of max :min number',
+            'name.required' => 'È richiesto un nome di minimo 5 lettere',
+            'name.unique:restaurants' => 'Il nome deve essere unico',
+            'name.max' => 'Il nome può avere una lunghezza massima di :max lettere',
+            'name.min' => 'Il nome deve avere una lunghezza minima di :min lettere',
+            'address.required' => 'È richiesto un indirizzo',
+            'address.unique:restaurants' => 'Indirizzo già utilizzato',
+            'vat.required' => 'La P.IVA è richiesta',
+            'vat.unique' => 'P.IVA già registrata',
+            'vat.max' => 'La P.IVA deve avere una lunghezza di 11 caratteri',
+            'email.required' => 'Il campo Email è richiesto',
+            'email.unique:restaurants' => 'Email già registrata',
+            'email.max' => 'La lunghezza dell\'email non può eccedere i 50 caratteri',
+           
+            'image.max' => 'L\immagine non può superare i 2MB di peso',
+            'phone.max' => 'Il numero di telefono non può eccedere i :max caratteri',
+            'phone.min' => 'Il numero di telefono deve essere lungo almeno :min caratteri',
 
 
         ];
