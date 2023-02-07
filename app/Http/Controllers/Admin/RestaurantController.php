@@ -21,7 +21,12 @@ class RestaurantController extends Controller
     public function index()
     {   
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
-        return view('admin.restaurants.index', compact('restaurant'));
+        if ($restaurant) {
+            return view('admin.restaurants.index', compact('restaurant'));
+        }else{
+            abort(404);
+        }
+        
     }
 
     /**
@@ -31,9 +36,12 @@ class RestaurantController extends Controller
      */
     public function create()
     {
-        $types = Type::all();
-
-        return view('admin.restaurants.create', compact('types')); 
+        if(Restaurant::where('user_id',Auth::user()->id)->exists()){
+            abort(403);
+        } else {
+            $types = Type::all();
+            return view('admin.restaurants.create', compact('types')); 
+        }
          
     }
 
@@ -105,6 +113,10 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
+        $ristorante = Restaurant::where('user_id',Auth::user()->id)->first();
+        if ($ristorante->id !== $restaurant->id) {
+            abort(403);
+        }
         $types = Type::all();
         return view('admin.restaurants.edit', compact('types','restaurant')); 
     }

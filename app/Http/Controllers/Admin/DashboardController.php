@@ -23,7 +23,7 @@ class DashboardController extends Controller
             return view('admin.dashboard', compact('restaurant'));
         }else{
             $types = Type::all();
-            return view('admin.restaurants.create', compact('types'));
+            return redirect()->route('admin.restaurants.create', compact('types'));
         }
     }
 
