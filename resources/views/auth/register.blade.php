@@ -88,7 +88,7 @@
                   <input type="password" id="form3Example4" class="form-control" name="password_confirmation" required autocomplete="new-password">
                   
   
-                  <label class="form-label" for="form3Example4">Password</label>
+                  <label class="form-label" for="form3Example4">Confirm Password</label>
                 </div>
   
                 
