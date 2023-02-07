@@ -1,0 +1,90 @@
+#hero {
+
+    #hero-section {
+        background: url(/public/img/business-1.jpg) no-repeat center;
+        background-size: cover;
+        position: relative;
+        min-height: 100%;
+    }
+
+    .titolo {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        h1 {
+            font-size: 6em;
+            text-shadow: 0 0 10px black;
+        }
+    }
+
+    h1,
+    h2 {
+        color: white;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 2em;
+        text-shadow: 0 0 10px black;
+    }
+
+    .cards-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .my-card {
+        margin: 30px auto;
+        width: 300px;
+        height: 450px;
+        border-radius: 40px;
+        box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    }
+    
+    .my-card .card-image {
+        width: inherit;
+        height: inherit;
+        border-radius: 40px;
+    }
+    
+    .my-card .card-image img {
+        width: inherit;
+        height: inherit;
+        border-radius: 40px;
+        object-fit: cover;
+    }
+    
+    .my-card .card-title {
+        text-align: center;
+        border-radius: 0px 0px 40px 40px;
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: -100px;
+        height: 40px;
+        color: white;
+    }
+
+    .my-btn {
+        background: #ec0b43;
+        color: white;
+        padding: 1rem 3rem;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 2rem;
+        transition-duration: 0.4s;
+        text-decoration: none;
+    }
+
+    .my-btn:hover {
+        background: white;
+        box-shadow: 0px 2px 20px 10px gray;
+        color: black;
+    }
+}
+
