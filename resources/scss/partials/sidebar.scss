@@ -1,0 +1,33 @@
+// SIDEBAR
+#admin {
+    height: 100vh;
+    display: flex;
+
+    #wrapper-admin {
+        flex-grow: 1;
+
+        header {
+            min-height: 70px;
+
+            .img-profile {
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+    }
+
+    #sidebarMenu {
+        background-color: white;
+        color: black;
+        border-right: 1px solid rgba(223, 223, 223);
+        filter: drop-shadow(15px 0px 60px rgba(104, 104, 104, 0.1));
+
+        .bg-secondary{
+            background-color: rgb(221, 26, 75)!important;
+            color: white!important;
+
+            border-radius: 5px;
+            margin: 3px;
+        }
+    }
+}

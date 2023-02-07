@@ -1,26 +1,35 @@
 @import '~bootstrap/scss/bootstrap';
-img { max-width: 100%;}
-// SIDEBAR
-#admin {
-    height: 100vh;
-    display: flex;
+img {max-width: 100%;}
+@import "./partials/sidebar.scss";
+@use "./partials/welcome" as *;
 
-    #wrapper-admin {
-        flex-grow: 1;
 
-        header {
-            min-height: 70px;
 
-            .img-profile {
-                height: 2rem;
-                width: 2rem;
-            }
-        }
+
+// PAGINATION COLOR
+.pagination{
+    .page-link{
+    color: #000;}
+
+    .page-item.active .page-link {
+        color: #fff !important;
+        background-color: rgb(221, 26, 75) !important;
+        border-color: #fff !important;
     }
+}
 
-    #sidebarMenu {
-        background-color: black;
-        color: white;
+// BUTTON COLOR
+input[type="text"]:focus {
+    border-color: rgb(221, 26, 75);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(221, 26, 75, 0.6);
+}
+#button-addon2{
+    color: rgb(221, 26, 75);
+    border-color: rgb(221, 26, 75);
+
+    &:hover{
+        color: #fff;
+        background-color: rgb(221, 26, 75) !important;
     }
 }
 
