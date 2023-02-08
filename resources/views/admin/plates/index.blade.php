@@ -17,7 +17,7 @@
                 <tr>
                     <th scope="col">Nome</th>
                     <th class="bl-hidden" scope="col">Prezzo</th>
-                    <th class="bl-hidden" scope="col">Visibile sul sito</th>
+                    <th class="bl-hidden" scope="col" style="width: 130px">Visibile sul sito</th>
                     <th class="bl-hidden" scope="col">Ingredienti</th>
                     <th scope="col">Modifica</th>
                     <th scope="col">Elimina</th>
