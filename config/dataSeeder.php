@@ -10,7 +10,7 @@ return  [
             
             "name"=> "La locanda delle Due Suocere",
 
-            "image"=> "https://s3-media3.fl.yelpcdn.com/bphoto/faE0npYif25ft15cTvyWrQ/o.jpg",
+            "image"=> "images/La locanda delle Due Suocere.jpeg",
 
             "website"=> "https://www.yelp.com/biz/la-locanda-delle-due-suocere-novara?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
 
@@ -41,7 +41,7 @@ return  [
 
             "name"=> "La Vecchia",
 
-            "image"=> "",
+            "image"=> "images/La Vecchia.jpeg",
            
             "website"=> "https://www.yelp.com/biz/la-vecchia-trecate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
           
@@ -73,7 +73,7 @@ return  [
           
             "name"=> "The Kitchen",
 
-            "image"=> "https://s3-media3.fl.yelpcdn.com/bphoto/92_h-G5ArBBa1TEdAxchuA/o.jpg",
+            "image"=> "images/The Kitchen.jpeg",
             
             "website"=> "https://www.yelp.com/biz/the-kitchen-galliate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
             
@@ -107,7 +107,7 @@ return  [
 
             "name"=> "La Chiocciola",
 
-            "image"=> "https://s3-media2.fl.yelpcdn.com/bphoto/9IsZmjdy7cu60HOyui942Q/o.jpg",
+            "image"=> "images/La Chiocciola.jpeg",
             
             "website"=> "https://www.yelp.com/biz/la-chiocciola-san-martino-di-trecate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
            
@@ -140,7 +140,7 @@ return  [
             
             "name"=> "Re Matto",
 
-            "image"=> "https://s3-media3.fl.yelpcdn.com/bphoto/IfKt4VPWp-U0ndAUkvB0EQ/o.jpg",
+            "image"=> "images/Re Matto.jpeg",
             
             "website"=> "https://www.yelp.com/biz/re-matto-galliate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
            
@@ -172,7 +172,7 @@ return  [
             
             "name"=> "American Graffiti",
 
-            "image"=> "https://s3-media2.fl.yelpcdn.com/bphoto/xy4lgPzLZPFdiBZycKBGcg/o.jpg",
+            "image"=> "images/americanGrafiti.jpeg",
             
             "website"=> "https://www.yelp.com/biz/american-graffiti-trecate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
            
@@ -203,7 +203,7 @@ return  [
             
             "name"=> "Benvenuti al Sud Galliate",
 
-            "image"=> "https://tinyurl.com/napoules",
+            "image"=> "images/Benvenuti al Sud Galliate.jpeg",
             
             "website"=> "https://www.facebook.com/benvenutialsudgalliate/",
            
@@ -234,7 +234,7 @@ return  [
             
             "name"=> "Pub New Soliva",
 
-            "image"=> "https://tinyurl.com/pubdresd",
+            "image"=> "images/Pub New Soliva.jpeg",
             
             "website"=> "https://www.facebook.com/NEWSOLIVA.RESTAURANT.PUB/",
            
@@ -265,7 +265,7 @@ return  [
             
             "name"=> "Osteria 50",
 
-            "image"=> "https://tinyurl.com/italiaost",
+            "image"=> "images/Osteria 50.jpeg",
             
             "website"=> "https://osteria50.it/",
            
@@ -296,7 +296,7 @@ return  [
             
             "name"=> "Wasabis City",
 
-            "image"=> "https://tinyurl.com/sfswacxw",
+            "image"=> "images/Wasabis City.jpeg",
             
             "website"=> "https://www.ristorantejapwasabi.com/",
            
@@ -326,7 +326,7 @@ return  [
             
             "name"=> "Asian Way",
 
-            "image"=> "http://bit.ly/3Rtql98",
+            "image"=> "images/Asian Way.jpeg",
             
             "website"=> "https://www.ristorantejapwasabi.com/",
            
