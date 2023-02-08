@@ -27,12 +27,12 @@
                 
                 <p class="lead text-white">{{ $restaurant->description }}</p>
                 <div class="d-flex">
-                    <button class="btn btn-outline-light flex-shrink-1" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        <a class="link-secondary text-white" href="{{ route('admin.restaurants.edit', $restaurant->slug) }}" title="Edit product">
+                   
+                        
+                        <a class="btn btn-dark  text-white" href="{{ route('admin.restaurants.edit', $restaurant->slug) }}" title="Edit product">
                             Modifica informazioni <i class="fa-solid fa-pen"></i>
                         </a>
-                    </button>
+                    
                 </div>
             </div>
         </div>

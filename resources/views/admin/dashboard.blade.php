@@ -64,6 +64,7 @@
                                 <div class="widget-subheading">Ordini di questo mese</div>
                             </div>
                             <div class="widget-content-right">
+                                {{-- spero sia solo un placeholder --}}
                                 <div class="widget-numbers text-white ml-5"><span>396</span></div>
                             </div>
                         </div>
