@@ -20,6 +20,7 @@
             @error('name')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
+            <div class="form-text">* Minimo 2 caratteri e massimo 100 caratteri</div>
         </div>
         {{-- prezzo --}}
         <div class="mb-3">
@@ -28,6 +29,7 @@
             @error('price')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
+            <div class="form-text">* Campo obbligatorio</div>
         </div>
         {{-- disponibilità --}}
         <div class="mb-3">
@@ -65,6 +67,7 @@
             @error('ingredients')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
+            <div class="form-text">* Campo obbligatorio</div>
         </div>
         {{-- allergeni--}}
         <div class="mb-3">
@@ -76,7 +79,7 @@
         </div>
         {{-- size--}}
         <div class="mb-3">
-            <label for="size" class="form-label">Dimensioni</label>
+            <label for="size" class="form-label">Porzione</label>
             <input type="text" class="form-control @error('size') is-invalid @enderror" value="{{old('size')}}" id="size" name="size" maxlength="30">
             @error('size')
             <div class="invalid-feedback">{{ $message }}</div>
@@ -94,11 +97,20 @@
             @error('category_id')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
+            <div class="form-text">* Campo obbligatorio</div>
         </div>
         {{-- btns --}}
         <button type="submit" class="btn btn-success">Modifica</button>
         <button type="reset" class="btn btn-primary">Reset</button>
     </form>
 </div>
+
+<style>
+    .form-control:focus{
+        border-color: rgb(221, 26, 75);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(221, 26, 75, 0.6);
+    }
+    
+</style>
 
 @endsection
