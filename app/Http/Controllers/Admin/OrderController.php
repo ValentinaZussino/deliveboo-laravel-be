@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
 
-
 class OrderController extends Controller
 {
     /**
@@ -16,12 +15,13 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
         if($restaurant){
-           $orders = Order::where('restaurant_id', $restaurant->id)->get();
-            return view('admin.orders.index', compact('orders'));
+           $orders = Order::where('restaurant_id', $restaurant->id)->with('plates')->get();
+           return view('admin.orders.index', compact('orders'));
         }else {
             abort(404);
         }
@@ -89,8 +89,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Order $order)
     {
-        //
+        $deleted = $order->name;
+        $order->delete();
+        return redirect()->route('admin.orders.index')->with('message', "$deleted eliminato con successo!");
     }
 }
