@@ -10,7 +10,7 @@
             <div class="mb-3">
                 <label for="name" class="form-label">Nome del Ristorante</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required>
-
+                 <h6 class="fw-lighter">Nome obbligatorio*</h6>
                 @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -20,7 +20,7 @@
                 <label for="address" class="form-label">Indirizzo civico</label>
                 <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
                     name="address" placeholder="Via/C.so/P.zza xxxx xxxx, 12">
-
+                    <h6 class="fw-lighter">indirizzo civico obbligatorio*</h6>
                 @error('address')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -30,7 +30,7 @@
                 <label for="email" class="form-label">Email del Ristorante</label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
                     name="email">
-
+                    <h6 class="fw-lighter">Email del ristorante obbligatorio*</h6>
                 @error('email')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -39,7 +39,7 @@
             <div class="mb-3">
                 <label for="vat" class="form-label">P.IVA</label>
                 <input type="text" class="form-control @error('vat') is-invalid @enderror" id="vat" name="vat">
-
+                <h6 class="fw-lighter">P.IVA obbligatorio*</h6>
                 @error('vat')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -83,9 +83,10 @@
                     @error('opening_days')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
+                    <h6 class="fw-lighter">Orari obbligatori*</h6>
                 </div>
             </div>
-
+            <h6 class="fw-lighter pb-5">Orari obbligatori*</h6>   
             
                 <label for="types" class="form-label">Selezionare la tipologia di cucina servita</label><br>
                 <div class="tipi-select overflow-auto d-flex flex-column col-4">
