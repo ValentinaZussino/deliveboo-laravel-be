@@ -10,7 +10,7 @@
                  @if ($restaurant->image)
                 <img class="card-img-top mb-5 mb-md-0 w-100" src="{{ asset('storage/'.$restaurant->image) }}" alt="{{$restaurant->name}}">
                 @else
-                    <img class="img-fluid rounded-start" src="{{ asset('img/no-image.jpg') }}" alt="{{$plate->name}}">
+                    <img class="img-fluid rounded-start" src="{{ asset('img/no-image.jpg') }}" alt="{{$restaurant->name}}">
                 @endif
             </div>
             <div class="col-md-6">
@@ -40,7 +40,4 @@
 </section>
 </div>
 
-    {{-- @foreach ($restaurants as $restaurant)
-    <h3>{{$restaurant->name}}</h3>
-@endforeach --}}
 @endsection

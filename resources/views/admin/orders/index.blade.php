@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('content')
+
 <div class="col-12 mb-3">
     {{-- messages --}}
     @if(session()->has('message'))
@@ -45,9 +46,11 @@
                             <hr>
 
                             <p class="card-text fw-semibold">Piatti ordinati:</p>
-                            @foreach($order->plates as $plate)
-                            <li>{{ $plate->name }}</li>
-                            @endforeach
+                            <ul>
+                                @foreach($order->plates as $plate)
+                                <li>{{ $plate->name }}</li>
+                                @endforeach
+                            </ul>
                         </div>
                 </div>
             </div>
