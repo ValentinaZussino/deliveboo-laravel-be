@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use App\Models\Restaurant;
+use Illuminate\Support\Facades\Auth;
+
 
 class OrderController extends Controller
 {
@@ -15,7 +18,14 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        if($restaurant){
+           $orders = Order::where('restaurant_id', $restaurant->id)->get();
+            return view('admin.orders.index', compact('orders'));
+        }else {
+            abort(404);
+        }
+        
     }
 
     /**
