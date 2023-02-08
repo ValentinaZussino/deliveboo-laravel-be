@@ -53,23 +53,6 @@ class RestaurantController extends Controller
      */
     public function store(StoreRestaurantRequest $request)
     {
-        // $data = $request->validated();
-        // $slug = Restaurant::generateSlug($request->name);
-        // $data['slug'] = $slug;
-
-        // if($request->hasFile('image')){
-        //     $path = Storage::put('images',$request->image);
-        //     $data['image'] = $path;
-        // }
-
-        // $newrestaurant = Restaurant::create($data);
-
-        // if($request->has('types')){
-        //     $newrestaurant->types()->attach($request->types);
-        // }
-
-        // return redirect()->route('admin.restaurants.index', $newrestaurant->slug);
-  
         $data = $request->validated();
         
         $data['user_id'] = Auth::user()->id;

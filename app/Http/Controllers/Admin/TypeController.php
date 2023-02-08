@@ -41,13 +41,7 @@ class TypeController extends Controller
      */
     public function store(StoreTypeRequest $request)
     {
-        $val = $request->validated();
-        $slug = Type::generateSlug($request->name);
-        $val['slug'] = $slug;
-
-        Type::create($val);
-
-        return redirect()->back()->with('message', "Type $slug added successfully");
+        // 
         
     }
 
@@ -81,12 +75,7 @@ class TypeController extends Controller
      */
     public function update(UpdateTypeRequest $request, Type $type)
     {
-        $val_data = $request->validated();
-        $slug = Type::generateSlug($request->name);
-        $val_data['slug'] = $slug;
-        $type->update($val_data);
-
-        return redirect()->back()->with('message', "Type $slug updated successfully");
+        // 
     }
 
     /**
@@ -97,7 +86,6 @@ class TypeController extends Controller
      */
     public function destroy(Type $type)
     {
-        // $type->delete(); 
-        // return redirect()->back()->with('message', "Type $type->name removed successfully");
+        //
     }
 }

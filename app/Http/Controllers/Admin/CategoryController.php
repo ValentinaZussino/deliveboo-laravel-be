@@ -42,16 +42,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        $val = $request->validated();
-        $slug = Category::generateSlug($request->name);
-        $val['slug'] = $slug;
-
-       Category::create($val);
-    //    if($request->has('categories')){
-    //         $newCategory->categories()->attach($request->categories);
-    //    };
-
-        return redirect()->back()->with('message', "Category $slug added successfully");
+        //     
     }
 
     /**
@@ -85,12 +76,7 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        $val_data = $request->validated();
-        $slug = Category::generateSlug($request->name);
-        $val_data['slug'] = $slug;
-        $type->update($val_data);
-
-        return redirect()->back()->with('message', "Category $slug updated successfully");
+        // 
     }
 
     /**
