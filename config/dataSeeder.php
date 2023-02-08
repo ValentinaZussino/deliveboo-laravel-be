@@ -10,7 +10,7 @@ return  [
             
             "name"=> "La locanda delle Due Suocere",
 
-            "image"=> "https://s3-media3.fl.yelpcdn.com/bphoto/faE0npYif25ft15cTvyWrQ/o.jpg",
+            "image"=> "images/La locanda delle Due Suocere.jpeg",
 
             "website"=> "https://www.yelp.com/biz/la-locanda-delle-due-suocere-novara?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
 
@@ -41,7 +41,7 @@ return  [
 
             "name"=> "La Vecchia",
 
-            "image"=> "",
+            "image"=> "images/La Vecchia.jpeg",
            
             "website"=> "https://www.yelp.com/biz/la-vecchia-trecate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
           
@@ -73,7 +73,7 @@ return  [
           
             "name"=> "The Kitchen",
 
-            "image"=> "https://s3-media3.fl.yelpcdn.com/bphoto/92_h-G5ArBBa1TEdAxchuA/o.jpg",
+            "image"=> "images/The Kitchen.jpeg",
             
             "website"=> "https://www.yelp.com/biz/the-kitchen-galliate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
             
@@ -107,7 +107,7 @@ return  [
 
             "name"=> "La Chiocciola",
 
-            "image"=> "https://s3-media2.fl.yelpcdn.com/bphoto/9IsZmjdy7cu60HOyui942Q/o.jpg",
+            "image"=> "images/La Chiocciola.jpeg",
             
             "website"=> "https://www.yelp.com/biz/la-chiocciola-san-martino-di-trecate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
            
@@ -140,7 +140,7 @@ return  [
             
             "name"=> "Re Matto",
 
-            "image"=> "https://s3-media3.fl.yelpcdn.com/bphoto/IfKt4VPWp-U0ndAUkvB0EQ/o.jpg",
+            "image"=> "images/Re Matto.jpeg",
             
             "website"=> "https://www.yelp.com/biz/re-matto-galliate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
            
@@ -172,7 +172,7 @@ return  [
             
             "name"=> "American Graffiti",
 
-            "image"=> "https://s3-media2.fl.yelpcdn.com/bphoto/xy4lgPzLZPFdiBZycKBGcg/o.jpg",
+            "image"=> "images/americanGrafiti.jpeg",
             
             "website"=> "https://www.yelp.com/biz/american-graffiti-trecate?adjust_creative=jwI0XBZfYVzSZAm53Au16Q&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=jwI0XBZfYVzSZAm53Au16Q",
            
@@ -203,7 +203,7 @@ return  [
             
             "name"=> "Benvenuti al Sud Galliate",
 
-            "image"=> "https://tinyurl.com/napoules",
+            "image"=> "images/Benvenuti al Sud Galliate.jpeg",
             
             "website"=> "https://www.facebook.com/benvenutialsudgalliate/",
            
@@ -234,7 +234,7 @@ return  [
             
             "name"=> "Pub New Soliva",
 
-            "image"=> "https://tinyurl.com/pubdresd",
+            "image"=> "images/Pub New Soliva.jpeg",
             
             "website"=> "https://www.facebook.com/NEWSOLIVA.RESTAURANT.PUB/",
            
@@ -265,7 +265,7 @@ return  [
             
             "name"=> "Osteria 50",
 
-            "image"=> "https://tinyurl.com/italiaost",
+            "image"=> "images/Osteria 50.jpeg",
             
             "website"=> "https://osteria50.it/",
            
@@ -296,7 +296,7 @@ return  [
             
             "name"=> "Wasabis City",
 
-            "image"=> "https://tinyurl.com/sfswacxw",
+            "image"=> "images/Wasabis City.jpeg",
             
             "website"=> "https://www.ristorantejapwasabi.com/",
            
@@ -326,7 +326,7 @@ return  [
             
             "name"=> "Asian Way",
 
-            "image"=> "http://bit.ly/3Rtql98",
+            "image"=> "images/Asian Way.jpeg",
             
             "website"=> "https://www.ristorantejapwasabi.com/",
            
@@ -360,7 +360,7 @@ return  [
         [
             "name"=>"Chinese Chicken Salad",
             "price"=>"8.5",
-            "image"=>"https://images.spoonacular.com/file/wximages/423979-312x231.jpg",
+            "image"=>"images/Chinese-Chicken-Salad_0a.jpeg",
             "restaurant_id" => [10, 11],
             "category_id" => 16,
             "ingredients"=> "pollame, salsa di soia, olio di sesamo, aglio, zenzero, aceto di vino, miele, sale, pepe nero",
@@ -372,7 +372,7 @@ return  [
         [
             "name"=>"Masterpiece Chicken & Dumplings Soup",
             "price"=>"7.5",
-            "image"=>"https://images.spoonacular.com/file/wximages/340668-312x231.jpg",
+            "image"=>"images/Masterpiece Chicken & Dumplings Soup.jpeg",
             "restaurant_id" => [10, 11],
             "category_id" => 6,
             "ingredients" => "ravioli, pollame, broccoli, coriandolo, olio di sesamo, semi di sesamo, asian stock powder",
@@ -384,7 +384,7 @@ return  [
         [
             "name"=>"Wagyu Beef & Ginger Dumplings",
             "price"=>"12",
-            "image"=>"https://images.spoonacular.com/file/wximages/227524-312x231.jpg",
+            "image"=>"images/Wagyu Beef & Ginger Dumplings.jpeg",
             "restaurant_id" => [3, 6],
             "category_id" => 15,                    
             "ingredients" => "pollame, cipolla, uova, zenzero, zucchero, olio di sesamo, semi di sesamo, soia, gochujang",
@@ -397,7 +397,7 @@ return  [
         [
             "name"=>"Chicken Tacos",
             "price"=>"3.5",
-            "image"=>"https://tinyurl.com/24sj5wm4",
+            "image"=>"images/american-graffiti-chicken-tacos.jpg",
             "restaurant_id" => [6],
             "category_id"=>16,
             "ingredients" => "tortillas di mais, pollo, sale, paprika macinata, origano, timo, cipolla, aglio, pepe di cayenna, peperoncino, pepe nero",
@@ -409,7 +409,7 @@ return  [
         [
             "name"=>"Popeye Burger",
             "price"=>"8.5",
-            "image"=>"https://tinyurl.com/panino2",
+            "image"=>"images/popeye-burger.jpeg",
             "restaurant_id" => [2, 3, 4, 5],
             "category_id"=>16,
             "ingredients" => "Hamburger di Spinaci, Patatine Fritte, Medaglione di Melanzane panate, Patate novelle al Forno, Pestato di Pomodoro Secco, Scamorza Affumicata, Cipolla Caramellata",
@@ -421,7 +421,7 @@ return  [
         [
             "name"=>"Chicken Burger",
             "price"=>"6.5",
-            "image"=>"https://tinyurl.com/2p8uhdw6",
+            "image"=>"images/chicken-burger3.webp",
             "restaurant_id" => [2, 3, 5],
             "category_id"=>16,
             "ingredients" => "Sovraccoscia di Pollo Fritto, Pomodori, Bacon Croccante, Patatine Fritte, Fonduta di Parmigiano, Salsa Crispy Homemade Souce , Insalata",
@@ -433,7 +433,7 @@ return  [
         [
             "name"=>"Raw No Beef",
             "price"=>"7.5",
-            "image"=>"https://tinyurl.com/veganob",
+            "image"=>"la-locanda-delle-due-suocere-raw-no-beef",
             "restaurant_id" => [1, 8],
             "category_id"=>4,
             "ingredients" => "Raw No Beef(veg), Patate al Forno, Pestato di pomodoro secco, Patate novelle al Forno, Cipolla Rossa Grigliata",
@@ -445,7 +445,7 @@ return  [
         [
             "name" => "Pizza La Ribelle",
             "price" => "7",
-            "image" => "https://tinyurl.com/pizzabuf",
+            "image" => "images/pizza la ribelle1jpg.jpg",
             "restaurant_id" => [7, 5],
             "category_id"=>15,
             "ingredients" => "Mozzarella Fior di Latte, Bocconcino di Bufala, Basilico, Fonduta di Cheddar Artigianale , Olio Evo, Ragù di Ribs Homemade",
@@ -457,7 +457,7 @@ return  [
         [
             "name"=>"Pizza La Porcellona",
             "price"=>"7.5",
-            "image"=>"https://tinyurl.com/bruttabrutta",
+            "image"=>"images/pizza-la-porcellona.jpeg",
             "restaurant_id" => [7, 5],
             "category_id"=>15,
             "ingredients" => "Mozzarella Fior di Latte, Pulled Pork, Crema di Cheddar, Cipolla Caramellata, Bacon, Chips di Patate Novelle",
@@ -469,7 +469,7 @@ return  [
         [
             "name"=>"Pizza La Focosa",
             "price"=>"7.5",
-            "image"=>"https://tinyurl.com/diavolsds",
+            "image"=>"images/pizzza-la-focosa.jpeg",
             "restaurant_id" => [7, 5],
             "category_id"=>15,
             "ingredients" => "Pomodoro, Mozzarella, Jalapeño, Salsa Habanero, Salame piccante",
@@ -481,7 +481,7 @@ return  [
         [
             "name"=>"Pizza La Cruda e Fusa",
             "price"=>"7",
-            "image"=>"https://tinyurl.com/gesiuuuu",
+            "image"=>"images/pizza-la-cruda-e-fusa1.jpeg",
             "restaurant_id" => [7, 5],
             "category_id"=>16,
             "ingredients" => "Mozzarella Fior di Latte, Passata di pomodoro, Prosciutto Crudo, Fonduta di Parmigiano, Olio Evo, Sbriciolata di patate al forno",
@@ -493,7 +493,7 @@ return  [
         [
             "name"=>"Pizza La Crocchettona",
             "price"=>"6.5",
-            "image"=>"https://tinyurl.com/eeeeed",
+            "image"=>"images/pizza-la-crocchettona.jpeg",
             "restaurant_id" => [7, 5],
             "category_id"=>16,
             "ingredients" => "Mozzarella Fior di Latte, Bacon, Olio Evo, Basilico, Crocchettone di Patate Menta e Pecorino, Fonduta al Pecorino Romano, Bocconcino di Bufala",
@@ -505,7 +505,7 @@ return  [
         [
             "name"=>"Pizza La Vegetariana",
             "price"=>"7.5",
-            "image"=>"https://tinyurl.com/msfy7cn5",
+            "image"=>"images/pizza-la-vegetariana1jpg.jpg",
             "restaurant_id" => [7, 5],
             "category_id"=>7,
             "ingredients" => "Mozzarella Fior di Latte, Medaglione di Melanzane panate, Patate al Forno, Pestato di pomodoro secco",
@@ -517,7 +517,7 @@ return  [
         [
             "name"=>"Calzone Classico",
             "price"=>"6.5",
-            "image"=>"https://tinyurl.com/mrtc3wb6",
+            "image"=>"images/calzone-classico.jpeg",
             "restaurant_id" => [7, 5],
             "category_id"=>15,
             "ingredients" => "prociutto cotto, scamorza, parmigiano, ricotta di pecora",
@@ -529,7 +529,7 @@ return  [
         [
             "name"=>"Insalata di mare",
             "price"=>"12",
-            "image"=>"https://tinyurl.com/mtk6v64w",
+            "image"=>"images/insalata-di-mare2.jpeg",
             "restaurant_id" => [2, 9],
             "category_id"=>22,
             "ingredients" => "cozze, polpp, calamari, sedano, vongole, gamberi",
@@ -541,7 +541,7 @@ return  [
         [
             "name"=>"Gnocchi di patate al ragù di casa",
             "price"=>"10",
-            "image"=>"https://tinyurl.com/423xbmt9",
+            "image"=>"images/gnocchi2jpg.jpg",
             "restaurant_id" => [1, 9],
             "category_id"=>16,
             "ingredients" => "cipolle, patate, pomodori pelati, cipolle, carne macinata di manzo",
@@ -553,7 +553,7 @@ return  [
         [
             "name"=>"Tagliatelle al ragù",
             "price"=>"10",
-            "image"=>"https://tinyurl.com/33j4ethp",
+            "image"=>"images/tagliatelle-al-ragu.jpg",
             "restaurant_id" => [1, 9],
             "category_id"=>15,
             "ingredients" => "tagliate all'uovo, sedano, manzo carne tritata, maiale carne tritata, carote",
@@ -565,7 +565,7 @@ return  [
         [
             "name"=>"Spaghetti alla Carbonara",
             "price"=>"15",
-            "image"=>"https://tinyurl.com/5n7hu3vc",
+            "image"=>"images/Spaghettiallacarb1.png",
             "restaurant_id" => [4, 9],
             "category_id"=>16,
             "ingredients" => "spaghetti, tuorli, guanciale, pecorino romano, pepe nero",
@@ -577,7 +577,7 @@ return  [
         [
             "name"=>"Spaghetti all'Amatriciana",
             "price"=>"16",
-            "image"=>"https://tinyurl.com/2n7udajv",
+            "image"=>"images/spaghetti-allamatrician.jpeg",
             "restaurant_id" => [9],
             "category_id"=>16,
             "ingredients" => "spaghetti, guanciale, pecorino romano, pomodori pelati",
@@ -590,7 +590,7 @@ return  [
         [
             "name"=>"Linguine Allo Scoglio",
             "price"=>"18",
-            "image"=>"https://tinyurl.com/mr28t9z7",
+            "image"=>"images/linguine-pescatora.jpg",
             "restaurant_id" => [9],
             "category_id"=>16,
             "ingredients" => "spaghetti, vongole, scampi, cozze, calamari",
@@ -602,7 +602,7 @@ return  [
         [
             "name"=>"Patate al forno",
             "price"=>"4",
-            "image"=>"https://tinyurl.com/mr2pyw7e",
+            "image"=>"images/Patate-al-forno-1.png",
             "restaurant_id" => [9],
             "category_id"=>16,
             "ingredients"=> "patate, aglio, rosmarino, pepe nero",
@@ -614,7 +614,7 @@ return  [
         [
             "name"=>"Sagne Cacio e Pepe",
             "price"=>"9",
-            "image"=>"https://tinyurl.com/2p94as4n",
+            "image"=>"images/cacio e pepe.jpg",
             "restaurant_id" => [9],
             "category_id"=>16,
             "ingredients"=> "fettine di guancialetto, pecorino romano, pepe nero",
@@ -626,7 +626,7 @@ return  [
         [
             "name"=>"Tempura di gamberi",
             "price"=>"10",
-            "image"=>"https://tinyurl.com/mr3ys9un",
+            "image"=>"images/tempura-di-gamberijpg.jpg",
             "restaurant_id" => [10],
             "category_id"=>7,
             "ingredients"=> "gamberi, farina di riso",
@@ -638,7 +638,7 @@ return  [
         [
             "name"=>"Tempura di verdure",
             "price"=>"10",
-            "image"=>"https://tinyurl.com/mr3ys9un",
+            "image"=>"images/tempura-di-verdure.jpg",
             "restaurant_id" => [10, 11],
             "category_id"=>7,
             "ingredients"=> "verdure, farina di riso",
@@ -650,7 +650,7 @@ return  [
         [
             "name"=>"Udon",
             "price"=>"16",
-            "image"=>"https://tinyurl.com/4634bzrr",
+            "image"=>"images/Udon1.jpg",
             "restaurant_id" => [10, 11],
             "category_id"=>16,
             "ingredients"=> "udon, cipolla, uova, carote",
@@ -662,7 +662,7 @@ return  [
         [
             "name"=>"Noodles in brodo con tempura di pesce",
             "price"=>"14.50",
-            "image"=>"https://tinyurl.com/mtthy54s",
+            "image"=>"images/Masterpiece Chicken & Dumplings Soup.jpeg",
             "restaurant_id" => [11],
             "category_id"=>15,
             "ingredients"=> "udon, gamberi, porro, uova",
@@ -674,7 +674,7 @@ return  [
         [
             "name"=>"Katsudon",
             "price"=>"15",
-            "image"=>"https://tinyurl.com/3j2cnrzu",
+            "image"=>"images/katsudon.jpg",
             "restaurant_id" => [10],
             "category_id"=>16,
             "ingredients"=> "lonza di maiale, riso, uova",
@@ -686,7 +686,7 @@ return  [
         [
             "name"=>"Onion Rings",
             "price"=>"5",
-            "image"=>"https://tinyurl.com/cipodfslla",
+            "image"=>"images/onion-rings1.jpg",
             "restaurant_id" => [1, 3, 4, 5, 6, 8],
             "category_id"=>16,
             "ingredients"=> "cipolle rosse, uova",
@@ -700,7 +700,7 @@ return  [
         [
             "name"=>"Coca-Cola",
             "price"=>"2",
-            "image"=>"https://images.spoonacular.com/file/wximages/424563-312x231.png",
+            "image"=>"images/CocaLatt.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -712,7 +712,7 @@ return  [
         [
             "name"=>"Fanta",
             "price"=>"2",
-            "image"=>"https://images.spoonacular.com/file/wximages/267262-312x231.png",
+            "image"=>"images/fanta-lattina.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -724,7 +724,7 @@ return  [
         [
             "name"=>"Coca-Cola Zero",
             "price"=>"2",
-            "image"=>"https://images.spoonacular.com/file/wximages/424563-312x231.png",
+            "image"=>"images/coca-zero-lattina.jpeg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -736,7 +736,7 @@ return  [
         [
             "name"=>"Sprite",
             "price"=>"2",
-            "image"=>"https://tinyurl.com/spiritosds",
+            "image"=>"images/sprite-lattina.jpeg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -748,7 +748,7 @@ return  [
         [
             "name"=>"Pepsi",
             "price"=>"2",
-            "image"=>"https://tinyurl.com/pepssees",
+            "image"=>"images/pepsi.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -760,7 +760,7 @@ return  [
         [
             "name"=>"Acqua naturale",
             "price"=>"2",
-            "image"=>"https://tinyurl.com/siiumsium",
+            "image"=>"images/acqua-naturale2jpg.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -772,7 +772,7 @@ return  [
         [
             "name"=>"Acqua frizzante",
             "price"=>"2",
-            "image"=>"https://tinyurl.com/bbiuoyuiytu",
+            "image"=>"images/acquaFrizz2ng.png",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -784,7 +784,7 @@ return  [
         [
             "name"=>"The alla pesca",
             "price"=>"2",
-            "image"=>"https://tinyurl.com/thedsedas",
+            "image"=>"images/the-pesca2.png",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -796,7 +796,7 @@ return  [
         [
             "name"=>"The al limone",
             "price"=>"2",
-            "image"=>"https://tinyurl.com/47dx22rd",
+            "image"=>"images/the-limone.png",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -808,7 +808,7 @@ return  [
         [
             "name"=>"Chinotto",
             "price"=>"4.5",
-            "image"=>"https://tinyurl.com/2p9bwtb7",
+            "image"=>"images/chinotto.png",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, anidride carbonica, colorante E 150d, edulcoranti ciclammato di sodio, acesulfame K, aspartame, acidificante acido fosforico, aromi naturali (inclusa caffeina), correttore di acidità citrato trisodico.",
@@ -820,7 +820,7 @@ return  [
         [
             "name"=>"Moretti",
             "price"=>"2.8",
-            "image"=>"https://tinyurl.com/r9nmbxpv",
+            "image"=>"images/moretti.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, cereali, lievito, luppolo.",
@@ -832,7 +832,7 @@ return  [
         [
             "name"=>"Heineken",
             "price"=>"2.8",
-            "image"=>"https://tinyurl.com/2favjs9e",
+            "image"=>"images/heineken.png",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, cereali, lievito, luppolo.",
@@ -844,7 +844,7 @@ return  [
         [
             "name"=>"Guinnes",
             "price"=>"3",
-            "image"=>"https://tinyurl.com/2ybfz72j",
+            "image"=>"images/guinnes.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, cereali, lievito, luppolo.",
@@ -856,7 +856,7 @@ return  [
         [
             "name"=>"Corona",
             "price"=>"3",
-            "image"=>"https://tinyurl.com/73tuwk3j",
+            "image"=>"images/corona.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, cereali, lievito, luppolo.",
@@ -868,7 +868,7 @@ return  [
         [
             "name"=>"Ichnussa",
             "price"=>"4.5",
-            "image"=>"https://tinyurl.com/5yvtxscn",
+            "image"=>"images/ichnussa.jpg",
             "restaurant_id" => [1,2,3,4,5,6,7,8,9,10,11],
             "category_id"=>1,
             "ingredients"=> "acqua, cereali, lievito, luppolo.",
@@ -882,28 +882,28 @@ return  [
 
     "categories"=>[
 
-        "gluten-free",
-        "lactose-free",
-        "vegetarian",
-        "vegan",
+        "senza glutine",
+        "senza lattosio",
+        "vegetariano",
+        "vegano",
         "paleo",
-        "ketogenic",
-        "low-carb",
-        "low-fat",
-        "organic",
-        "non-GMO",
+        "cheto",
+        "a basso contenuto di carboidrati",
+        "a basso contenuto di grassi",
+        "biologico",
+        "senza OGM",
         "halal",
         "kosher",
-        "raw",
-        "whole food",
-        "carb-conscious",
-        "high-protein",
-        "dairy-free",
-        "soy-free",
-        "nut-free",
-        "egg-free",
-        "grain-free",
-        "pescatarian"
+        "crudo",
+        "alimenti interi",
+        "consapevole dei carboidrati",
+        "ad alto contenuto di proteine",
+        "senza latticini",
+        "senza soia",
+        "senza noci",
+        "senza uova",
+        "senza cereali",
+        "pescatariano"
 
     ],
 
