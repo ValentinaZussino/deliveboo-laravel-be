@@ -36,7 +36,7 @@
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
                       <input type="text" id="form3Example1" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                      <label class="form-label" for="form3Example1">{{ __('Name') }}</label>
+                      <label class="form-label" for="form3Example1">Nome</label>
                       
                       @error('name')
                       <span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
                       <input type="text" id="form3Example2" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
-                      <label class="form-label" for="form3Example2">{{ __('Surname') }}</label>
+                      <label class="form-label" for="form3Example2">Cognome</label>
   
                       @error('surname')
                                   <span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
                   <input type="email" id="form3Example3" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
                   @error('email')
                   <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
+                      <strong>Email già registrata</strong>
                   </span>
                   @enderror
   
@@ -79,7 +79,7 @@
                   <input type="password" id="form3Example4" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                   @error('password')
                   <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
+                      <strong>Le password non corrispondono</strong>
                   </span>
                   @enderror
   
@@ -92,14 +92,14 @@
                   <input type="password" id="form3Example4" class="form-control" name="password_confirmation" required autocomplete="new-password">
                   
   
-                  <label class="form-label" for="form3Example4">Confirm Password</label>
+                  <label class="form-label" for="form3Example4">Conferma Password</label>
                 </div>
   
                 
   
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block mb-4">
-                  {{ __('Register') }}
+                  Registrati
                 </button>
   
                 
