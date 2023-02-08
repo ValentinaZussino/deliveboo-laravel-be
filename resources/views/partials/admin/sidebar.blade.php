@@ -10,29 +10,29 @@
             </a></li>
             <li class="nav-item">
                 <a class="nav-link text-black {{ Route::currentRouteName() == 'admin.restaurants.index' ? 'bg-secondary' : '' }}" href="{{route('admin.restaurants.index')}}">
-                    <i class="fa-solid fa-utensils fa-lg fa-fw"></i> Restaurant
+                    <i class="fa-solid fa-utensils fa-lg fa-fw"></i> Ristorante
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-black {{ Route::currentRouteName() == 'admin.plates.index' ? 'bg-secondary' : '' }}" href="{{route('admin.plates.index')}}">
-                    <i class="fa-solid fa-plate-wheat fa-lg fa-fw"></i> Plates
+                    <i class="fa-solid fa-plate-wheat fa-lg fa-fw"></i> Piatti
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-black {{ Route::currentRouteName() == 'admin.categories.index' ? 'bg-secondary' : '' }}" href="{{route('admin.categories.index')}}">
-                    <i class="fa-solid fa-bookmark fa-lg fa-fw"></i> Categories
+                    <i class="fa-solid fa-bookmark fa-lg fa-fw"></i> Categorie
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-black {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-secondary' : '' }}" href="{{route('admin.types.index')}}">
-                    <i class="fa-solid fa-tag fa-lg fa-fw"></i> Types
+                    <i class="fa-solid fa-tag fa-lg fa-fw"></i> Tipologie
                 </a>
             </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link text-white" href="#">
-                    <i class="fa-solid fa-users fa-lg fa-fw"></i> Users
+            <li class="nav-item">
+                <a class="nav-link text-black {{ Route::currentRouteName() == 'admin.orders.index' ? 'bg-secondary' : '' }}" href="{{route('admin.orders.index')}}">
+                    <i class="fa-solid fa-cart-shopping fa-lg fa-fw"></i> Ordini
                 </a>
-            </li> --}}
+            </li>
         </ul>
     </div>
     <div class="dropdown">

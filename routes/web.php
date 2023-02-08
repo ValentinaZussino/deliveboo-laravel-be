@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\PlateController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TypeController;
-
+use App\Http\Controllers\Admin\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,7 +41,7 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')
          Route::resource('plates', PlateController::class)->parameters(['plates' => 'plate:slug']);
          Route::resource('categories', CategoryController::class)->parameters(['categories' => 'category:slug'])->except('show', 'create', 'edit');
          Route::resource('types', TypeController::class)->parameters(['types' => 'type:slug'])->except('show', 'create', 'edit');
-
+         Route::resource('orders', OrderController::class)->parameters(['orders' => 'order:slug'])->except('show', 'create', 'edit');
    });
 
 require __DIR__.'/auth.php';
