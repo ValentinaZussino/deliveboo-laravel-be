@@ -22,10 +22,14 @@ class PlateController extends Controller
     public function index()
     {   
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
-        // dd($restaurant);
-        $plates = Plate::where('restaurant_id', $restaurant->id)->get();
-        // dd($plates);
-        return view('admin.plates.index', compact('plates'));
+        if($restaurant){
+            $plates = Plate::where('restaurant_id', $restaurant->id)->get();
+            // dd($plates);
+            return view('admin.plates.index', compact('plates'));
+        }else{
+            abort(404);
+        }
+        
     }
 
     /**
@@ -71,6 +75,10 @@ class PlateController extends Controller
     public function show(Plate $plate)
 
     {
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        if($plate->restaurant_id !== $restaurant->id){
+            abort(403);
+        }
         return view('admin.plates.show', compact('plate'));
     }
 
@@ -82,6 +90,10 @@ class PlateController extends Controller
      */
     public function edit(Plate $plate)
     {
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        if($plate->restaurant_id !== $restaurant->id){
+            abort(403);
+        }
         $categories = Category::all();
         return view('admin.plates.edit', compact('categories', 'plate'));
     }
@@ -112,7 +124,7 @@ class PlateController extends Controller
         $updated = $plate->name;
         $plate->update($data);
 
-        return redirect()->route('admin.plates.index')->with('message', "$updated updated successfully");
+        return redirect()->route('admin.plates.index')->with('message', "$updated modificato con successo!");
     }
 
     /**
@@ -125,6 +137,6 @@ class PlateController extends Controller
     {
         $deleted = $plate->name;
         $plate->delete();
-        return redirect()->route('admin.plates.index')->with('message', "$deleted deleted successfully");
+        return redirect()->route('admin.plates.index')->with('message', "$deleted eliminato con successo!");
     }
 }
