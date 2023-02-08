@@ -20,7 +20,7 @@ class OrderController extends Controller
     {
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
         if($restaurant){
-           $orders = Order::where('restaurant_id', $restaurant->id)->with('plates')->get();
+           $orders = Order::where('restaurant_id', $restaurant->id)->with('plates')->orderBy('date','desc')->get();
            return view('admin.orders.index', compact('orders'));
         }else {
             abort(404);
