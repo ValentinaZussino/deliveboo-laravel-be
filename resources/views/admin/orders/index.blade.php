@@ -6,8 +6,16 @@
     <p>{{$order->name}}</p>
     <p>{{$order->last_name}}</p>
     <p>{{$order->phone}}</p>
-    <p>{{$order->total_amount}}</p>
     <p> <span>Ristorante</span> {{$order->restaurant_id}}</p>
+   
+    <ul>
+        @foreach($order->plates as $plate)
+        <li>{{ $plate->name }} </li>
+        @endforeach
+    </ul>
+   
+    <hr>
+    <hr>
 @endforeach
 
 @endsection
