@@ -4,6 +4,8 @@
     display: flex;
 
     #wrapper-admin {
+        overflow-y: auto;
+        max-height: 100vh; 
         flex-grow: 1;
 
         header {
