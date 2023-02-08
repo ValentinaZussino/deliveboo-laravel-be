@@ -1,56 +1,44 @@
 @extends('layouts.admin')
 @section('content')
-    <h1>{{ $restaurant->name }}</h1>
+<div class="restaurants-background">
 
-    <div>
-        Indirizzo:
-        <p>{{ $restaurant->address }}</p>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">
+                 @if ($restaurant->image)
+                <img class="card-img-top mb-5 mb-md-0 w-100" src="{{ asset('storage/'.$restaurant->image) }}" alt="{{$restaurant->name}}">
+                @else
+                    <img class="img-fluid rounded-start" src="{{ asset('img/no-image.jpg') }}" alt="{{$plate->name}}">
+                @endif
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder text-white">{{ $restaurant->name }}</h1>
+                <div class="fs-5 mb-5">
+                    <span class="text-white">{{ $restaurant->address }}</span>
+                    <span class="d-flex text-white"> Orari:
+                        <p class="day-open text-white">{{ $restaurant->opening_days }}</p>
+                        <p class="day-open text-white">{{ $restaurant->opening_hours }}</p>
+                        <p class="day-open text-white">{{ $restaurant->closing_hours }}</p></span>
+                </div>
+                <div class="small mb-3 text-white">PIVA: {{ $restaurant->vat }}</div>
+                
+                
+                <p class="lead text-white">{{ $restaurant->description }}</p>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light flex-shrink-1" type="button">
+                        <i class="bi-cart-fill me-1"></i>
+                        <a class="link-secondary text-white" href="{{ route('admin.restaurants.edit', $restaurant->slug) }}" title="Edit product">
+                            Modifica informazioni <i class="fa-solid fa-pen"></i>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        P.IVA:
-        <p>{{ $restaurant->vat }}</p>
-    </div>
-
-    <div class="w-50">
-        <img class="w-100" src="{{ $restaurant->image }}" alt="">
-                  {{-- nuovo path da utilizzare una volta importate correttamente le immagini nello storage e associate ai ristoranti --}}
-                        {{-- @if ($restaurant->image)
-                            <img class="image-container" src="{{ asset('storage/' . $product->image) }}" alt="{{$product->name}}">
-                        @else
-                            <small class="text-secondary">No image</small>
-                        @endif --}}      
-    </div>
-
-    <div>
-        Contatti:
-        <p>{{ $restaurant->phone }}</p>
-        <a href="{{ $restaurant->website }}">Sito</a>
-        <p>{{ $restaurant->email }}</p>
-    </div>
-    <div class="d-flex gap-4">
-        Orari:
-        <p>{{ $restaurant->opening_days }}</p>
-        <p>{{ $restaurant->opening_hours }}</p>
-        <p>{{ $restaurant->closing_hours }}</p>
-    </div>
-
-    <div>
-        Descrizione:
-        <p>{{ $restaurant->description }}</p>
-    </div>
-
-    <div>
-        Rustorante creato il:
-        <p>{{ $restaurant->created_at }}</p>
-    </div>
-
-
-
-
-
-    <a class="link-secondary" href="{{ route('admin.restaurants.edit', $restaurant->slug) }}" title="Edit product">
-        Modifica informazioni <i class="fa-solid fa-pen"></i>
-    </a>
+</section>
+</div>
 
     {{-- @foreach ($restaurants as $restaurant)
     <h3>{{$restaurant->name}}</h3>
