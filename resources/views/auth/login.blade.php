@@ -36,11 +36,11 @@
                   <input type="email" id="form3Example3" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
                   @error('email')
                   <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
+                      <strong>Email o password non corrispondono</strong>
                   </span>
                   @enderror
   
-                  <label class="form-label" for="form3Example3">Email address</label>
+                  <label class="form-label" for="form3Example3">Email</label>
                 </div>
   
                 <!-- Password input -->
@@ -59,7 +59,7 @@
                 <div class="form-check d-flex justify-content-center mb-4">
                   <input class="form-check-input me-2" type="checkbox" value="" id="remember" checked {{ old('remember') ? 'checked' : '' }} />
                   <label class="form-check-label" for="form2Example33">
-                    Remeber me 
+                    Ricorda
                   </label>
                 </div>
   
