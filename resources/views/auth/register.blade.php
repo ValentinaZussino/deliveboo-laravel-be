@@ -28,7 +28,7 @@
               backdrop-filter: blur(30px);
               ">
             <div class="card-body p-5 shadow-5 text-center">
-              <h2 class="fw-bold mb-5">Sign up now</h2>
+              <h2 class="fw-bold mb-5">Iscriviti ora</h2>
               <form method="POST" action="{{ route('register') }}">
                 @csrf
                  <!-- 2 column grid layout with text inputs for the first and last names -->
@@ -71,7 +71,7 @@
                   </span>
                   @enderror
   
-                  <label class="form-label" for="form3Example3">Email address</label>
+                  <label class="form-label" for="form3Example3">Email </label>
                 </div>
   
                 <!-- Password input -->
