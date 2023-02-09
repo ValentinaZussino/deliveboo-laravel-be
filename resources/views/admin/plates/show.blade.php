@@ -26,7 +26,7 @@
 						<p class="card-text"><span class="fw-semibold">Porzione: </span>{{$plate->size}}</p>
 					@endif
 					
-					<p class="card-text"><span class="fw-semibold">Disponibile: </span>{{$plate->available == 1 ? 'Sì' : 'No'}}</p>
+					<p class="card-text"><span class="fw-semibold">Visibile sul sito: </span>{{$plate->available == 1 ? 'Sì' : 'No'}}</p>
 		
 					<a class="button-red" href="{{route('admin.plates.index')}}">Torna ai piatti</a>
 				</div>

@@ -39,7 +39,7 @@
 
                             </div>
                             <p class="card-text"><span class="fw-semibold">Nome: </span>{{$order->name}}</p>
-                            <p class="card-text"><span class="fw-semibold">Cognome: </span>{{$order->name}}</p>
+                            <p class="card-text"><span class="fw-semibold">Cognome: </span>{{$order->last_name}}</p>
                             <p class="card-text"><span class="fw-semibold">Cellulare: </span> {{$order->phone}}</p>
                             <p class="card-text"><span class="fw-semibold">Indirizzo: </span> {{$order->address}}</p>
                             <p class="card-text"><span class="fw-semibold">Totale: </span>{{$order->total_amount}}&nbsp;&euro;</p>
@@ -48,7 +48,7 @@
                             <p class="card-text fw-semibold">Piatti ordinati:</p>
                             <ul>
                                 @foreach($order->plates as $plate)
-                                <li>{{ $plate->name }}</li>
+                                <li>{{ $plate->name }} <br> <span>Quantità:</span> <span class="fw-bold">{{ $plate->pivot->quantity }}</span> </li>
                                 @endforeach
                             </ul>
                         </div>

@@ -37,7 +37,7 @@
                             </div>
                             @endif
         
-                            {{ __('Se riuescito ad loggare!') }}
+                            {{ __('Sei riuescito a loggare!') }}
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                </div>
             </div>
             {{-- GRAFICI --}}
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-6 col-xl-6 p-5 ">
                     <div class="card mb-3 widget-content bg-midnight-bloom">
                         <div class="widget-content-wrapper text-white">
@@ -63,9 +63,9 @@
                                 <div class="widget-heading">Totale Ordini</div>
                                 <div class="widget-subheading">Ordini di questo mese</div>
                             </div>
-                            <div class="widget-content-right">
+                            <div class="widget-content-right"> --}}
                                 {{-- spero sia solo un placeholder --}}
-                                <div class="widget-numbers text-white ml-5"><span>396</span></div>
+                                {{-- <div class="widget-numbers text-white ml-5"><span>396</span></div>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                     <div class="card mb-3 widget-content bg-arielle-smile">
                         <div class="widget-content-wrapper text-white">
                             <div class="widget-content-left">
-                                <div class="widget-heading">Guadgani</div>
+                                <div class="widget-heading">Guadagani</div>
                                 <div class="widget-subheading">Guadagni dagli ordini </div>
                             </div>
                             <div class="widget-content-right">
@@ -84,16 +84,16 @@
                         </div>
                     </div>
 
-            </div>
+            </div> --}}
             {{-- tabella --}}
 
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-12">
                     <div class="main-card mb-3 card">
-                        <div class="card-header">Active Users
+                        <div class="card-header">Utenti attivi
                             <div class="btn-actions-pane-right">
                                 <div role="group" class="btn-group-sm btn-group">
-                                    <button class="active btn btn-focus">Last Week</button>
+                                    <button class="active btn btn-focus">Settimana scorsa</button>
                                     <button class="btn btn-focus">All Month</button>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="text-center">Coeso Genova</td>
+                                    <td class="text-center">Corso Genova</td>
                                     <td class="text-center">
                                         <div class="badge badge-warning">Pending</div>
                                     </td>
@@ -218,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             
 

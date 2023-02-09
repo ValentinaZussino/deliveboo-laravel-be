@@ -8,7 +8,7 @@
                     <div class="row justify-content-between align-items-center gy-2">
                         {{-- TITOLO --}}
                         <div class="col-sm-4 col-md-6 col-lg-8">
-                            <h3 class="px-2 gap-1 mb-0 ms-5">Types</h5>
+                            <h3 class="px-2 gap-1 mb-0 ms-5">Tipologie</h5>
                     </div>
                 </div>
             </div>
