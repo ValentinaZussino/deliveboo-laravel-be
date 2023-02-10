@@ -16,7 +16,7 @@ class RestaurantController extends Controller
         $restaurants = Restaurant::with('types')->get();
         return response()->json([
             'success' => true,
-            'results' => $restaurants,
+            'results' => $restaurants, 
         ]);
         
     }
