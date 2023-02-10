@@ -7,7 +7,7 @@
 
         <div class="row">
 
-            <div class="mb-3">
+            <div class="mb-3 col-lg-6">
                 <label for="name" class="form-label">Nome del Ristorante</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required>
                  <h6 class="fw-lighter">Nome obbligatorio*</h6>
@@ -16,7 +16,7 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-lg-6">
                 <label for="address" class="form-label">Indirizzo civico</label>
                 <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
                     name="address" placeholder="Via/C.so/P.zza xxxx xxxx, 12">
@@ -26,7 +26,7 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-lg-6">
                 <label for="email" class="form-label">Email del Ristorante</label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
                     name="email">
@@ -36,7 +36,7 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-lg-6">
                 <label for="vat" class="form-label">P.IVA</label>
                 <input type="text" class="form-control @error('vat') is-invalid @enderror" id="vat" name="vat">
                 <h6 class="fw-lighter">P.IVA obbligatorio*</h6>
@@ -45,7 +45,7 @@
                 @enderror
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-lg-6">
                 <label for="phone" class="form-label">Recapito Telefonico</label>
                 <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone"
                     name="phone">
@@ -56,7 +56,7 @@
             </div>
 
 
-            <div class="d-flex">
+            <div class="d-flex col-lg-6">
 
                 <div class="mb-3">
                     <label for="opening_hours" class="form-label">Orario apertura</label>
@@ -86,7 +86,7 @@
                     <h6 class="fw-lighter">Orari obbligatori*</h6>
                 </div>
             </div>
-            <h6 class="fw-lighter pb-5">Orari obbligatori*</h6>   
+            <h6 class="fw-lighter mb-3">Orari obbligatori*</h6>   
             
                 <label for="types" class="form-label">Selezionare la tipologia di cucina servita</label><br>
                 <div class="tipi-select overflow-auto d-flex flex-column col-4">
@@ -104,7 +104,7 @@
                 @enderror
                 </div>
 
-                <div class="mb-3">
+                <div class="my-3">
                     <label for="website" class="form-label">Sito Web del Ristorante</label>
                     <input type="url" id="website" name="website" placeholder="https://example.com"
                     pattern="https://.*" size="30"
@@ -126,7 +126,7 @@
             
 
 
-            <div class="mb-3">
+            <div class="mb-3 col-lg-6">
                 <img id="uploadPreview" width="100" src="https://via.placeholder.com/300x200">
                 <label for="image" class="form-label">Immagine</label>
                 <input type="file" name="image" id="create_cover_image"
@@ -138,9 +138,9 @@
             </div>
         </div>
 
-        <div class="text-center">
+        <div class="text-center m-3">
             <button type="submit" class="btn btn-success">Crea</button>
-            <button type="reset" class="btn btn-warning">Reset</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
         </div>
 
     </form>
