@@ -13,12 +13,10 @@ class RestaurantController extends Controller
     public function index(Request $request)
     {
 
-        $restaurants = Restaurant::all();
+        $restaurants = Restaurant::with('types')->get();
         return response()->json([
             'success' => true,
-            'results' => $restaurants,
-            
-
+            'results' => $restaurants, 
         ]);
         
     }
