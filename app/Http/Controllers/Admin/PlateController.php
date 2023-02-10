@@ -39,8 +39,14 @@ class PlateController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('admin.plates.create', compact('categories'));
+        $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
+        if($restaurant){
+            $categories = Category::all();
+            return view('admin.plates.create', compact('categories'));
+        }else{
+            abort(403);
+        }
+        
     }
 
     /**
@@ -76,7 +82,9 @@ class PlateController extends Controller
 
     {
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
-        if($plate->restaurant_id !== $restaurant->id){
+        if(!$restaurant){
+            abort(404);
+        }else if($plate->restaurant_id !== $restaurant->id){
             abort(403);
         }
         return view('admin.plates.show', compact('plate'));
@@ -91,7 +99,9 @@ class PlateController extends Controller
     public function edit(Plate $plate)
     {
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
-        if($plate->restaurant_id !== $restaurant->id){
+        if(!$restaurant){
+            abort(403);
+        }else if($plate->restaurant_id !== $restaurant->id){
             abort(403);
         }
         $categories = Category::all();
@@ -135,6 +145,9 @@ class PlateController extends Controller
      */
     public function destroy(Plate $plate)
     {
+        if($plate->image){
+            Storage::delete($plate->image);
+        }
         $deleted = $plate->name;
         $plate->delete();
         return redirect()->route('admin.plates.index')->with('message', "$deleted eliminato con successo!");
