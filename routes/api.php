@@ -27,3 +27,4 @@ Route::get('types', [RestaurantController::class, 'types']);
 Route::get('categories', [RestaurantController::class, 'categories']);
 Route::get('plates', [PlateController::class, 'index']);
 Route::get('plates/{slug}', [PlateController::class, 'show']);
+Route::get('filter', [RestaurantController::class, 'filterRestaurants']);
