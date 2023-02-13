@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\PlateController;
+use App\Http\Controllers\Api\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,4 @@ Route::get('categories', [RestaurantController::class, 'categories']);
 Route::get('plates', [PlateController::class, 'index']);
 Route::get('plates/{slug}', [PlateController::class, 'show']);
 Route::get('filter', [RestaurantController::class, 'filterRestaurants']);
+Route::post('checkout', [CartController::class, 'index']);
