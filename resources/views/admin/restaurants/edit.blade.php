@@ -10,8 +10,8 @@
             
                 <div class="mb-3 col-lg-6">
                     <label for="name" class="form-label">Nome del Ristorante</label>
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required  value="{{old('name', $restaurant->name)}}">
-                    <h6 class="fw-lighter">Nome obbligatorio*</h6>
+                    <input readonly type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" required  value="{{old('name', $restaurant->name)}}">
+                    <h6 class="fw-lighter">Il nome del ristorante non può essere modificato</h6>
     
                     @error('name')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -22,7 +22,7 @@
                     <label for="address" class="form-label">Indirizzo civico</label>
                     <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
                         name="address" value="{{old('address', $restaurant->address)}}" >
-                        <h6 class="fw-lighter">indirizzo civico obbligatorio*</h6>
+                        <h6 class="fw-lighter">Indirizzo civico obbligatorio*</h6>
                     @error('address')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
