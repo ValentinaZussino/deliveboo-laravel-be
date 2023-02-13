@@ -58,7 +58,22 @@ class RestaurantController extends Controller
         ]);
     }
 
-
+    public function filterRestaurants(Request $request){
+        if ($request->has('type_id')) {
+            $restaurants = Restaurant::whereHas('types', function($query) use ($request) {
+                $query->where('type_id', $request->type_id);
+            })->get();
+            return response()->json([
+                'success' => true,
+                'results' => $restaurants
+            ]);
+        }else {
+            return response()->json([
+                'success' => false,
+                'results' => 'Not foundddd'
+            ]);
+        }
+    }
 
 }
 
