@@ -3,6 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
+
 
 class StorePlateRequest extends FormRequest
 {
@@ -24,7 +27,7 @@ class StorePlateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:2|max:100',
+            'name' => ['required', 'min:2', 'max:100', Rule::unique('plates')->where('restaurant_id', Auth::user()->restaurant->id)->ignore($this->plate)],
             'price' => 'required|numeric|min:0|max:9999,99',
             'available' => 'required',
             'image' => 'nullable|image|max:5000',
@@ -40,6 +43,7 @@ class StorePlateRequest extends FormRequest
             'name.required' => 'Il nome del piatto è obbligatorio',
             'name.min' => 'Il nome del piatto non può essere inferiore a :min caratteri',
             'name.max' => 'Il nome del piatto non può superare i :max caratteri',
+            'name.unique:plates' => 'Il nome del piatto esiste già',
             'price.required' => 'Il prezzo del piatto è obbligatorio',
             'price.max' => 'Il prezzo non deve superare :max',
             'available.required' => 'Indicare la disponibilità è obbligatorio.',

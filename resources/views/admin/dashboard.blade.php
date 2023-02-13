@@ -37,7 +37,7 @@
                             </div>
                             @endif
         
-                            {{ __('Sei riuescito a loggare!') }}
+                            {{ __('Sei riuscito a loggare!') }}
                         </div>
                     </div>
                 </div>

@@ -85,7 +85,7 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        return view('admin.restaurants.show', compact('restaurant'));
+        abort(404);
     }
 
     /**
@@ -97,7 +97,9 @@ class RestaurantController extends Controller
     public function edit(Restaurant $restaurant)
     {
         $ristorante = Restaurant::where('user_id',Auth::user()->id)->first();
-        if ($ristorante->id !== $restaurant->id) {
+        if(!$ristorante){
+            abort(403);
+        }else if ($ristorante->id !== $restaurant->id) {
             abort(403);
         }
         $types = Type::all();
