@@ -58,23 +58,47 @@ class RestaurantController extends Controller
         ]);
     }
 
-    public function filterRestaurants(Request $request){
-        if ($request->has('type_id')) {
-            $restaurants = Restaurant::whereHas('types', function($query) use ($request) {
-                $query->where('type_id', $request->type_id);
-            })->get();
-            return response()->json([
-                'success' => true,
-                'results' => $restaurants
-            ]);
-        }else {
+    // old filter
+    // public function filterRestaurants(Request $request){
+    //     if ($request->has('type_id')) {
+    //         $restaurants = Restaurant::whereHas('types', function($query) use ($request) {
+    //             $query->where('type_id', $request->type_id);
+    //         })->get();
+    //         return response()->json([
+    //             'success' => true,
+    //             'results' => $restaurants
+    //         ]);
+    //     }else {
+    //         return response()->json([
+    //             'success' => false,
+    //             'results' => 'Not foundddd'
+    //         ]);
+    //     }
+    // }
+
+
+    public function filterRestaurants(Request $request) {
+        $type_ids = $request->input('type_id', []);
+        $restaurants = Restaurant::where(function ($query) use ($type_ids) {
+            foreach ($type_ids as $type_id) {
+                $query->orWhereHas('types', function ($subquery) use ($type_id) {
+                    $subquery->where('type_id', $type_id);
+                });
+            }
+        })->get();
+    
+        if ($restaurants->isEmpty()) {
             return response()->json([
                 'success' => false,
-                'results' => 'Not foundddd'
+                'results' => 'Not found'
             ]);
         }
+    
+        return response()->json([
+            'success' => true,
+            'results' => $restaurants
+        ]);
     }
-
 }
 
 
