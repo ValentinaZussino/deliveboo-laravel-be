@@ -28,6 +28,14 @@ class CartController extends Controller
 
         $newOrder->save();
 
+        $plate_list = [];
+        foreach($request->cart as $item){
+            $key = $item['id'];
+            $quantity = $item['quantity'];
+            $plate_list[$key] = ['quantity' => $quantity];
+        }
+        $newOrder->plates()->attach($plate_list);
+
         return response()->json([
             'results' => $request->all(),
             'id' => $newOrder,

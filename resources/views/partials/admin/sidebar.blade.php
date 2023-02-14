@@ -47,7 +47,7 @@
             <li><hr class="dropdown-divider"></li>
             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                {{ __('Sign Out') }}
+                {{ __('Esci') }}
             </a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
