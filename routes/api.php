@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\PlateController;
 use App\Http\Controllers\Api\CartController;
+use App\Http\Controllers\Api\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('plates', [PlateController::class, 'index']);
 Route::get('plates/{slug}', [PlateController::class, 'show']);
 Route::get('filter', [RestaurantController::class, 'filterRestaurants']);
 Route::post('checkout', [CartController::class, 'index']);
+Route::get('token', [PaymentController::class, 'generate']);
+Route::post('payment', [PaymentController::class, 'sendPayment']);
