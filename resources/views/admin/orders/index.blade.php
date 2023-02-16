@@ -48,9 +48,12 @@
                             <p class="card-text fw-semibold">Piatti ordinati:</p>
                             <ul>
                                 @foreach($order->plates as $plate)
-                                <li>{{ $plate->name }} <br> <span>Quantità:</span> <span class="fw-bold">{{ $plate->pivot->quantity }}</span> </li>
+                                    <li>{{ $plate->name }} <br> <span>Quantità:</span> <span class="fw-bold">{{ $plate->pivot->quantity }}</span> </li>
                                 @endforeach
                             </ul>
+                            <hr>
+                            <p class="card-text"><span class="fw-semibold">Pagamento effettuato: </span>{{$order->payed == 1 ? 'Sì' : 'No'}}</p>
+
                         </div>
                 </div>
             </div>
