@@ -4,6 +4,7 @@ $red: #ED6A5A;
 $yellow: #F4F1BB;
 $acqua: #9BC1BC;
 $black: #011627;
+$pink: #fad2cd;
 
 // Generali
 body {
@@ -147,9 +148,9 @@ body {
  .blob2 {
      position: absolute;
      top: -7%;
-     left: 45%;
-     fill: $yellow;
-     width: 40vmax;
+     left: 46%;
+     fill: $pink;
+     width: 38vmax;
      z-index: -1;
      transform-origin: 50% 50%;
  }

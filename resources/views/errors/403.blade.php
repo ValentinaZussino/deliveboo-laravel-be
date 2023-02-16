@@ -15,9 +15,9 @@
                 <div id="mycard" class="card"> 
                     <div class="card-body text-center">
                         <h2 class="card-title mb-4 text-uppercase fw-bold">{{ __('Accesso Negato') }}</h2>
-                        <p>{{ __('Oops, sembra che tu stia cercando di entrare in un posto dove non sei il benvenuto! Siamo spiacenti, ma questa zona è riservata solo ai nostri amici più intimi. ') }}</p>
+                        <p>{{ __('Oops, sembra che tu stia cercando di entrare in un posto dove non sei il benvenuto! Siamo spiacenti, ma questa zona è riservata solo ai nostri amici più intimi. Se pensi che ci sia stato un errore, prova a indossare un paio di occhiali da sole e ad inserire nuovamente la password. ') }}</p>
                         <p>{{ __('Se non sei ancora tra i nostri amici, forse è il momento di fare un po\' di networking.') }}</p>
-                        <div class="d-flex justify-content-evenly m-4">
+                        <div class="d-flex justify-content-evenly m-5">
                             <form method="POST" action="{{ url()->previous() }}">
                             @csrf
                             <button type="submit" class="">{{ __('Torna Indietro') }}</button>
