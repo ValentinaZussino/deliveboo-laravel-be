@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Type;
+use App\Models\Order;
 
 
 class DashboardController extends Controller
@@ -20,7 +21,21 @@ class DashboardController extends Controller
     {   
         $restaurant = Restaurant::where('user_id',Auth::user()->id)->first();
         if($restaurant){
-            return view('admin.dashboard', compact('restaurant'));
+            $restaurant_id = Auth::user()->restaurant->id;
+
+            $total = Order::whereHas(
+                'plates',
+                function ($query) use ($restaurant_id) {
+                    $query->where('restaurant_id', $restaurant_id);
+                }
+            )
+                ->join('order_plate', 'orders.id', '=', 'order_plate.order_id')
+                ->selectRaw('DATE(orders.date) as date, SUM(orders.total_amount) as total')
+                ->groupBy('date')
+                ->get();
+
+            return view('admin.dashboard', compact('restaurant','total'));
+            
         }else{
             $types = Type::all();
             return redirect()->route('admin.restaurants.create', compact('types'));
