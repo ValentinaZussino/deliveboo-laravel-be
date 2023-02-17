@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
-
+use App\Models\Order;
 use App\Http\Requests\PaymentRequest;
 use Braintree\Gateway;
 use Illuminate\Http\Request;
+use App\Mail\NewOrder;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 
 class PaymentController extends Controller
 {
@@ -20,6 +23,9 @@ class PaymentController extends Controller
     }
 
     public function sendPayment(PaymentRequest $paymentRequest, Gateway $gateway){
+        $order = Order::latest('id')->first();
+        $restaurantId = $order->restaurant_id;
+        $restaurantEmail = DB::table('restaurants')->where('id', $restaurantId)->value('email');
         $result = $gateway->transaction()->sale([
             'amount' => $paymentRequest->amount,
             'paymentMethodNonce' => $paymentRequest->payment_method_nonce,
@@ -28,6 +34,10 @@ class PaymentController extends Controller
             ]
         ]);
         if($result->success){
+            $mail = new NewOrder($order);
+            Mail::to($order->email)
+                ->cc($restaurantEmail)
+                ->send($mail);
             $data = [
                 'success' => true,
                 'message' => 'Payment Succeeded',
