@@ -27,7 +27,7 @@
                 <div class="card border-dark ">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
-                                 <p class="card-text"><span class="fw-semibold">Data: </span>{{$order->date}}</p>
+                                 <p class="card-text"><span class="fw-semibold">Data: </span>{{date('d/m/y',strtotime($order->date)) }}</p>
                                  
                                 {{-- <button type="submit" class="delete-button btn btn-danger "><i class="fa-solid fa-trash-can"></i></button> --}}
 
