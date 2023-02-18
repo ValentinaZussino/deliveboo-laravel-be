@@ -8,7 +8,11 @@
     <div class="error-message">
         <img src="{{ asset('img/error404.png') }}" alt="Pagina non trovata" />
         <p>Ops! Sembra che tu abbia sbagliato strada. Qui non c'è nulla da vedere, a parte questo simpatico pasticciere che a quanto pare si è perso anche lui. Ma non temere, basta premere il pulsante magico qui sotto e tornerai alla giusta rotta!</p>
-        <button class="m-auto" onclick="window.location.href='/'">Torna alla Home</button>
+        <button class="m-auto" onclick="goBack()">{{ __('Torna Indietro') }}</button>
     </div>
 </section>
+
+ <script>
+        function goBack(){window.history.back();}
+</script>
 @endsection
