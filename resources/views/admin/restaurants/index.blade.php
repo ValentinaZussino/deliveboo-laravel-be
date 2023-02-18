@@ -22,7 +22,7 @@
                         <p class="day-open text-white">{{ $restaurant->opening_hours }}</p>
                         <p class="day-open text-white">{{ $restaurant->closing_hours }}</p></span>
                 </div>
-                <div class="small mb-3 text-white">PIVA: {{ $restaurant->vat }}</div>
+                <div class="small mb-3 text-white">P.IVA: {{ $restaurant->vat }}</div>
                 
                 
                 <p class="lead text-white">{{ $restaurant->description }}</p>

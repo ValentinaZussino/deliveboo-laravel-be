@@ -23,18 +23,32 @@ class DashboardController extends Controller
         if($restaurant){
             $restaurant_id = Auth::user()->restaurant->id;
 
-            $total = Order::whereHas(
+            // Incassi giornalieri
+            $totalDay = Order::whereHas(
                 'plates',
                 function ($query) use ($restaurant_id) {
                     $query->where('restaurant_id', $restaurant_id);
                 }
             )
                 ->join('order_plate', 'orders.id', '=', 'order_plate.order_id')
-                ->selectRaw('DATE(orders.date) as date, SUM(orders.total_amount) as total')
+                ->selectRaw("DATE_FORMAT(orders.date, '%d/%m/%Y') as date, SUM(orders.total_amount) as total")
                 ->groupBy('date')
                 ->get();
 
-            return view('admin.dashboard', compact('restaurant','total'));
+            
+            // Incasso mensile
+            $totalMonth = Order::whereHas(
+                'plates',
+                function ($query) use ($restaurant_id) {
+                    $query->where('restaurant_id', $restaurant_id);
+                }
+            )
+                ->join('order_plate', 'orders.id', '=', 'order_plate.order_id')
+                ->selectRaw('MONTHNAME(orders.date) as month, SUM(orders.total_amount) as total')
+                ->groupBy('month')
+                ->get();
+
+            return view('admin.dashboard', compact('restaurant','totalDay','totalMonth'));
             
         }else{
             $types = Type::all();

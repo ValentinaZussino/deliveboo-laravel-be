@@ -61,7 +61,7 @@
             
             <div class="container mt-5">
                 <h1>Statistiche ordini</h1>
-                <canvas id="myChart"></canvas> 
+                <canvas id="myChart"></canvas>
             </div>
             
         </div>
@@ -69,14 +69,15 @@
 </div>
 
 <script>
+    Chart.defaults.font.size = 15;
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: {!! json_encode($total->pluck('date')->toArray()) !!},
+            labels: {!! json_encode($totalDay->pluck('date')->toArray()) !!},
             datasets: [{
                     label: 'Incassi giornalieri',
-                    data: {!! json_encode($total->pluck('total')->toArray()) !!},
+                    data: {!! json_encode($totalDay->pluck('total')->toArray()) !!},
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(255, 159, 64, 0.2)',
@@ -102,8 +103,24 @@
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
-                }
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value, index, ticks) {
+                            return  value + ' €';
+                        }
+                    }
+                },
+            },
+            
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 22
+                        },
+                        color: 'black',
+                    }
+                },
             }
         }
     });

@@ -11,7 +11,7 @@
     {{-- form --}}
     <form action="{{ route('admin.plates.store') }}" method="POST" enctype="multipart/form-data" class="p-4">
         @csrf
-        <h3>Crea un nuovo piatto</h3>
+        <h3>Aggiungi un nuovo piatto</h3>
         {{-- nome --}}
         <div class="mb-3">
             <label for="name" class="form-label">Nome</label>
