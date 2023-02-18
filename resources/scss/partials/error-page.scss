@@ -7,15 +7,6 @@ $black: #011627;
 $pink: #fad2cd;
 
 // Generali
-body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    background: #fff;
-}
 
 #mycard{
     background-color: transparent !important;
@@ -27,7 +18,9 @@ body {
 .error-container {
     position: relative;
     height: 80vh;
-    // overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 
     .blobtainer {
         padding-top: 50px;
