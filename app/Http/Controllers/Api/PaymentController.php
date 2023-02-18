@@ -34,10 +34,15 @@ class PaymentController extends Controller
             ]
         ]);
         if($result->success){
-            $mail = new NewOrder($order);
-            Mail::to($order->email)
-                ->cc($restaurantEmail)
-                ->send($mail);
+            // $mail = new NewOrder($order);
+            // Mail::to($order->email)
+            //     ->cc($restaurantEmail)
+            //     ->send($mail);
+            $mailToCustomer = new NewOrder($order, 'customer');
+            Mail::to($order->email)->send($mailToCustomer);
+            $mailToRestaurant = new NewOrder($order, 'restaurant');
+            Mail::to($restaurantEmail)->send($mailToRestaurant);
+
             $data = [
                 'success' => true,
                 'message' => 'Payment Succeeded',
