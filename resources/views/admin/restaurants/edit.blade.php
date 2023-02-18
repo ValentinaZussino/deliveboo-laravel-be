@@ -22,7 +22,7 @@
                     <label for="address" class="form-label">Indirizzo civico</label>
                     <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
                         name="address" value="{{old('address', $restaurant->address)}}" >
-                        <h6 class="fw-lighter">Indirizzo civico obbligatorio*</h6>
+                        <h6 class="fw-lighter">&#42;Indirizzo civico obbligatorio</h6>
                     @error('address')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -32,7 +32,7 @@
                     <label for="email" class="form-label">Email del Ristorante</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
                         name="email" value="{{old('email', $restaurant->email)}}" >
-                        <h6 class="fw-lighter">Email del ristorante obbligatorio*</h6>
+                        <h6 class="fw-lighter">&#42;Email del ristorante obbligatorio</h6>
     
                     @error('email')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -42,7 +42,7 @@
                 <div class="mb-3 col-lg-6">
                     <label for="vat" class="form-label">P.IVA</label>
                     <input type="text" class="form-control @error('vat') is-invalid @enderror" id="vat" name="vat" value="{{old('vat', $restaurant->vat)}}">
-                    <h6 class="fw-lighter">P.IVA obbligatorio*</h6>
+                    <h6 class="fw-lighter">&#42;P.IVA obbligatorio</h6>
     
                     @error('vat')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -53,46 +53,54 @@
                     <label for="phone" class="form-label">Recapito Telefonico</label>
                     <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone"
                         name="phone" value="{{old('phone', $restaurant->phone)}}">
+
+                    <h6 class="fw-lighter">&#42;Recapito Telefonico obbligatorio</h6>
     
-                    @error('phone')
+                    {{-- @error('phone')
                         <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    @enderror --}}
                 </div>
 
 
-            <div class="d-flex col-lg-6">
+            <div class="col-lg-6">
 
-                <div class="mb-3">
-                    <label for="opening_hours" class="form-label">Orario apertura</label>
-                    <input type="time" id="opening_hours" name="opening_hours" min="00:00" max="24:00" required value="{{old('opening_hours', $restaurant->opening_hours)}}">
+                <div class="d-flex">
+                    <div>
+                        <label for="opening_hours" class="form-label">Orario apertura</label>
+                        <input type="time" id="opening_hours" name="opening_hours" min="00:00" max="24:00" required value="{{old('opening_hours', $restaurant->opening_hours)}}">
+    
+                        @error('opening_hours')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+    
+                    <div class="mx-2">
+                        <label for="closing_hours" class="form-label">Orario Chiusura</label>
+                        <input type="time" id="closing_hours" name="closing_hours" min="00:00" max="24:00" required value="{{old('closing_hours', $restaurant->closing_hours)}}">
+    
+                        @error('closing_hours')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+    
+                    <div class="mx-2">
+                        <label for="opening_days" class="form-label">Giorni di apertura</label>
+                        <input type="text" id="opening_days" name="opening_days" required value="{{old('opening_days', $restaurant->opening_days)}}">
+    
+                        @error('opening_days')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+    
+                    </div>
 
-                    @error('opening_hours')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
                 </div>
 
-                <div class="mb-3">
-                    <label for="closing_hours" class="form-label">Orario Chiusura</label>
-                    <input type="time" id="closing_hours" name="closing_hours" min="00:00" max="24:00" required value="{{old('closing_hours', $restaurant->closing_hours)}}">
-
-                    @error('closing_hours')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-
-                <div class="mb-3">
-                    <label for="opening_days" class="form-label">Giorni di apertura</label>
-                    <input type="text" id="opening_days" name="opening_days" required value="{{old('opening_days', $restaurant->opening_days)}}">
-
-                    @error('opening_days')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-
+                <div>
+                    <h6 class="fw-lighter">&#42;Campi obbligatori</h6>
                 </div>
                
             </div>
-            <h6 class="fw-lighter mb-3">Orari obbligatori*</h6>
-
+            
             
             <label for="types" class="form-label">Selezionare la tipologia di cucina servita</label><br>
             <div class="tipi-select overflow-auto d-flex flex-column col-4">
@@ -115,6 +123,7 @@
                 <input type="url" id="website" name="website" placeholder="https://example.com"
                 pattern="https://.*" size="30"
                 required value="{{old('website',$restaurant->website)}}">
+                <h6 class="fw-lighter">&#42;Sito Web del ristorante obbligatorio</h6>
 
                 @error('website')
                     <div class="invalid-feedback">{{ $message }}</div>
