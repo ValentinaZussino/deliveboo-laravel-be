@@ -20,9 +20,11 @@ class NewOrder extends Mailable
      * @return void
      */
     public $order;
-    public function __construct($_order)
+    public $recipient;
+    public function __construct($_order, $_recipient)
     {
         $this->order = $_order;
+        $this->recipient = $_recipient;
     }
 
     /**
@@ -45,10 +47,18 @@ class NewOrder extends Mailable
      */
     public function content()
     {
-        return new Content(
-            view: 'admin.emails.order-confirmation',
-            with: ['order' => $this->order],
-        );
+        if ($this->recipient === 'customer'){
+            return new Content(
+                view: 'admin.emails.order-confirmation',
+                with: ['order' => $this->order],
+            );
+        }elseif ($this->recipient === 'restaurant'){
+            return new Content(
+                view: 'admin.emails.new-order',
+                with: ['order' => $this->order],
+            );
+        }
+        
     }
 
     /**
