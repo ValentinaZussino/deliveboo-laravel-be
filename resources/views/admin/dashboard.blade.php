@@ -62,6 +62,8 @@
             <div class="container mt-5">
                 <h1>Statistiche ordini</h1>
                 <canvas id="myChart"></canvas>
+                <canvas id="myChart3" class="pt-2"></canvas>
+                <canvas id="myChart2" class="pt-2"></canvas>
             </div>
             
         </div>
@@ -70,6 +72,7 @@
 
 <script>
     Chart.defaults.font.size = 15;
+    Chart.defaults.elements.bar.borderWidth = 2;
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -96,7 +99,6 @@
                         'rgb(153, 102, 255)',
                         'rgb(201, 203, 207)'
                         ],
-                    borderWidth: 1
                 },
             ]
         },
@@ -122,6 +124,79 @@
                     }
                 },
             }
+        }
+    });
+
+    var ctx2 = document.getElementById('myChart2');
+    var myChart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: {!! json_encode($totalMonth->pluck('month')->toArray()) !!},
+            datasets: [{
+                label: 'Incasso mensile',
+                data: {!! json_encode($totalMonth->pluck('total')->toArray()) !!},
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value, index, ticks) {
+                            return  value + ' €';
+                        }
+                    }
+                },
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: {
+                        font: {
+                            size: 22
+                        },
+                        color: 'black',
+                    }
+                }
+            },
+        }
+    });
+
+    var ctx3 = document.getElementById('myChart3');
+    var myChart3 = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: {!! json_encode($totalMonthOrder->pluck('month')->toArray()) !!},
+            datasets: [{
+                label: 'Ordini mensili',
+                data: {!! json_encode($totalMonthOrder->pluck('total')->toArray()) !!},
+                borderWidth: 1,
+                backgroundColor: [
+                    'rgba(153, 102, 255, 0.2)',
+                ],
+                borderColor: [
+                    'rgb(153, 102, 255)',
+                ],
+            }]
+            
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+            plugins: {
+                legend: {
+                    display: true,
+                    labels: {
+                        font: {
+                            size: 22
+                        },
+                        color: 'black',
+                    }
+                }
+            },
         }
     });
 </script>

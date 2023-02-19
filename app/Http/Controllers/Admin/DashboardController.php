@@ -44,11 +44,24 @@ class DashboardController extends Controller
                 }
             )
                 ->join('order_plate', 'orders.id', '=', 'order_plate.order_id')
-                ->selectRaw('MONTHNAME(orders.date) as month, SUM(orders.total_amount) as total')
+                ->selectRaw("DATE_FORMAT(orders.date, '%m/%Y') as month, SUM(orders.total_amount) as total")
                 ->groupBy('month')
                 ->get();
 
-            return view('admin.dashboard', compact('restaurant','totalDay','totalMonth'));
+            $totalMonthOrder = Order::whereHas(
+                'plates',
+                function ($query) use ($restaurant_id) {
+                    $query->where('restaurant_id', $restaurant_id);
+                }
+            )
+                ->join('order_plate', 'orders.id', '=', 'order_plate.order_id')
+                ->selectRaw("DATE_FORMAT(orders.date, '%m/%Y') as month, SUM(orders.payed) as total")
+                ->groupBy('month')
+                ->get();
+
+            return view('admin.dashboard', compact('restaurant','totalDay','totalMonth','totalMonthOrder'));
+
+            
             
         }else{
             $types = Type::all();

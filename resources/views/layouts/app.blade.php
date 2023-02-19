@@ -42,7 +42,7 @@
                             <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link"  href="http://localhost:5174/">Vai al sito  </a>
+                            <a class="nav-link" target="_blank" href="http://localhost:5174/">Vai al sito  </a>
                         </li>
                     </ul>
 
