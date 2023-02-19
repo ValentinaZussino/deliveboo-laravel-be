@@ -2,7 +2,7 @@
 
 <h2>Riepilogo dell'ordine:</h2>
 
-<p><strong>Nome e cognome del Cliente: </strong>{{ $order->name }}, {{ $order->last_name }}</p>
+<p><strong>Nome e Cognome del Cliente: </strong><span style="text-transform: capitalize;">{{ $order->name }} {{ $order->last_name }}</span></p>
 <br>
 <p><strong>Piatti ordinati:</strong></p>
     <ul>
