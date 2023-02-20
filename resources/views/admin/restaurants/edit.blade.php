@@ -52,13 +52,13 @@
                 <div class="mb-3 col-lg-6">
                     <label for="phone" class="form-label">Recapito Telefonico</label>
                     <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone"
-                        name="phone" value="{{old('phone', $restaurant->phone)}}">
+                        name="phone" value="{{old('phone', $restaurant->phone)}}" required>
 
                     <h6 class="fw-lighter">&#42;Recapito Telefonico obbligatorio</h6>
     
-                    {{-- @error('phone')
+                    @error('phone')
                         <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror --}}
+                    @enderror
                 </div>
 
 
@@ -117,7 +117,22 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
             </div>
-
+            {{-- <div  class="tipi-select overflow-auto d-flex flex-column col-4">
+                @foreach ($types as $type)
+                <div class="d-flex">
+                  @if (old("types"))
+                        <input type="checkbox" class="form-check-input" id="{{ $$type->id }}" name="types[]" value="{{$type->id}}" {{in_array( $type->id, old("types", []) ) ? 'checked' : ''}}>
+                    @else
+                        <input type="checkbox" class="form-check-input" id="{{ $type->id }}" name="types[]" value="{{$type->id}}" {{$restaurant->types->contains($type) ? 'checked' : ''}}>
+                    @endif
+                        <label class="form-check-label text-capitalize" for="{{$type->id}}">{{$type->name}}</label>
+                </div>
+                @endforeach
+                @error('types')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div> --}}
+              
             <div class="my-3">
                 <label for="website" class="form-label">Sito Web del Ristorante</label>
                 <input type="url" id="website" name="website" placeholder="https://example.com"
@@ -141,7 +156,7 @@
             
 
 
-            <div class="mb-3 col-lg-6">
+            {{-- <div class="mb-3 col-lg-6">
                 <img id="uploadPreview" width="100" src="{{old('image',$restaurant->image)}}">
                 <label for="image" class="form-label px-3">Immagine</label>
                 <input type="file" name="image" id="create_cover_image"
@@ -150,7 +165,25 @@
                 @error('image')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
+            </div> --}}
+
+            <div class="d-flex">
+                <div class="media me-4">
+                    @if($restaurant->image)
+                      <img class="shadow" width="150" src="{{asset('storage/' . $restaurant->image)}}" alt="{{$restaurant->name}}">
+                      @else
+                      <img class="shadow" width="150" src="https://placeholder.pics/svg/400x300" alt="">
+                    @endif
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Immagine</label>
+                    <input type="file" name="image" id="create_cover_image" class="form-control @error('image') is-invalid @enderror">
+                    @error('image')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
             </div>
+
         </div>
 
         <div class="text-center m-3">

@@ -26,7 +26,7 @@
             <tbody class="table-group-divider">
                 @foreach ($plates as $plate)
                     <tr>
-                        <td><a href="{{route('admin.plates.show', $plate->slug)}}" title="View plate">{{$plate->name}}</a></td>
+                        <td><a href="{{route('admin.plates.show', $plate->slug)}}" title="View plate" class="text-capitalize">{{$plate->name}}</a></td>
                         <td class="bl-hidden">{{$plate->price}}&nbsp;&euro;</td>
                         <td class="bl-hidden">{{$plate->available == 1 ? 'Sì' : 'No'}}</td>
                         <td class="bl-hidden">{{$plate->ingredients}}</td>
