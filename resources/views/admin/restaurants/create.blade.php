@@ -48,7 +48,7 @@
             <div class="mb-3 col-lg-6">
                 <label for="phone" class="form-label">Recapito Telefonico</label>
                 <input type="text" class="form-control @error('phone') is-invalid @enderror" id="phone"
-                    name="phone">
+                    name="phone" required>
 
                 @error('phone')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -113,9 +113,8 @@
                 <div class="my-3">
                     <label for="website" class="form-label">Sito Web del Ristorante</label>
                     <input type="url" id="website" name="website" placeholder="https://example.com"
-                    pattern="https://.*" size="30"
-                    required>
-                    <h6 class="fw-lighter">&#42;Sito Web del ristorante obbligatorio</h6>
+                    pattern="https://.*" size="30">
+                    
 
 
                     @error('website')
